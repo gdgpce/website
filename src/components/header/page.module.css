@@ -1,0 +1,13 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+}
+
+.logo{
+    display: flex;
+    gap: 20px;
+}
+.logo img{
+    width: 75px;
+}
