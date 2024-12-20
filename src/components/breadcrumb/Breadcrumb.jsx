@@ -1,5 +1,7 @@
 "use client";
 import styles from "./page.module.css"
+import { CenteredDash, SideDash } from '@/components/dash/Dash';
+
 import { usePathname } from "next/navigation"
 export default function Breadcrumb(props) {
     const pathname = usePathname();
@@ -7,8 +9,11 @@ export default function Breadcrumb(props) {
     
     return(
         <section className={styles.container}>
-            <h1>{props.title}</h1>
-            <p>Home &gt; {pagename}</p>
+            <div className={styles.con}>
+                <h1>{props.title}</h1>
+                <CenteredDash />
+                <p>Home &gt; {pagename}</p>
+            </div>
         </section>
     )
 }

@@ -24,7 +24,7 @@
     height: 3px;
     bottom: 10px;
     left: 0;
-    background-color: var(--c1);
+    background-color: var(--c3);
     transform-origin: bottom;
     transition: transform 0.25s ease;
   }
@@ -43,7 +43,7 @@
     height: 3px;
     bottom: 10px;
     left: 0;
-    background-color: #fa851a;
+    background-color: var(--c3);
     transform-origin: bottom;
     transition: transform 0.25s ease;
 }

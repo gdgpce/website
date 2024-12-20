@@ -1,7 +1,13 @@
 .header{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px 60px;
+    align-items: center;
+    height: 100px;
+    padding: 0 60px;
+    z-index: 10;
+    position: absolute;
+    /* border-bottom: 0.006px solid #9874F5; */
 }
 
 .logo{
