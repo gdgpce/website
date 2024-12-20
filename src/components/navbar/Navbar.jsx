@@ -1,15 +1,23 @@
-import styles from "./page.module.css"
-import Link from "next/link"
+import styles from "./page.module.css";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-    return(
+    const pathname = usePathname();
+    const navItems = [
+        { name: "Home", path: "/" },
+        { name: "Team", path: "/team" },
+        { name: "Events", path: "/events" },
+        { name: "Sponsors", path: "/sponsors" },
+        { name: "Contact", path: "/contact" },
+        { name: "FAQs", path: "/faqs" },
+    ];
+
+    return (
         <nav className={styles.nav}>
-            <Link href="/" className={styles.active}>Home</Link>
-            <Link href="/team">Team</Link>
-            <Link href="/events">Events</Link>
-            <Link href="/sponsors">Sponsors</Link>
-            <Link href="/contact">Contact</Link>
-            <Link href="/faqs">FAQs</Link>
+            {navItems.map((item) => (
+                <Link href={item.path} key={item.name} className={pathname === item.path ? styles.active : "" }>{item.name}</Link>
+            ))}
         </nav>
-    )
+    );
 }

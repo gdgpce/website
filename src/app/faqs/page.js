@@ -4,11 +4,11 @@ import Header from "@/components/header/Header"
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
 
 
-export default function Team() {
+export default function FAQs() {
   return (
     <div>
       <Header />
-      <Breadcrumb title="Our Team" />
+      <Breadcrumb title="Frequently Asked Questions" />
     </div>
   );
 }

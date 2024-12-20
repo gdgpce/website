@@ -11,6 +11,7 @@
   "dependencies": {
     "antd": "^5.22.5",
     "next": "14.2.21",
+    "nextjs-toploader": "^3.7.15",
     "react": "^18",
     "react-dom": "^18"
   },
