@@ -26,13 +26,8 @@ export default function ClientComponent({ event, speaker, error }) {
         }
     }, [error, router]);
 
-    // If error is true, render error message
-    if (error) {
-        return <p>Redirecting to events page...</p>;
-    }
-
+    // Format date on the client
     useEffect(() => {
-        // Format date on the client
         if (event?.start_date_iso) {
             const date = new Date(event.start_date_iso).toLocaleString("en-US", {
                 year: "numeric",
@@ -46,6 +41,7 @@ export default function ClientComponent({ event, speaker, error }) {
         }
     }, [event?.start_date_iso]);
 
+    // Handle sticky scrolling
     useEffect(() => {
         const handleScroll = () => {
             if (!leftRef.current || !rightRef.current) return;
@@ -59,6 +55,11 @@ export default function ClientComponent({ event, speaker, error }) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    // Render error message and redirect when error is true
+    if (error) {
+        return <p>Redirecting to events page...</p>;
+    }
 
     return (
         <div className={styles.page}>
