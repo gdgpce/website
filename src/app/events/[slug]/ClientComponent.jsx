@@ -32,17 +32,19 @@ export default function ClientComponent({ event, speaker, error }) {
     }
 
     useEffect(() => {
-        // Format date on the client
-        const date = new Date(event.start_date_iso).toLocaleString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-            hour: "numeric",
-            minute: "numeric",
-            hour12: true,
-        });
-        setFormattedDate(date);
-    }, [event.start_date_iso]);
+        if (event?.start_date_iso) {
+            // Format date on the client
+            const date = new Date(event.start_date_iso).toLocaleString("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "numeric",
+                hour: "numeric",
+                minute: "numeric",
+                hour12: true,
+            });
+            setFormattedDate(date);
+        }
+    }, [event]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -57,6 +59,10 @@ export default function ClientComponent({ event, speaker, error }) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
+
+    if (!event) {
+        return <p>Loading...</p>;
+    }
 
     return (
         <div className={styles.page}>
@@ -92,7 +98,7 @@ export default function ClientComponent({ event, speaker, error }) {
                 </div>
                 <div className={styles.right} ref={rightRef}>
                     <h1>Speaker</h1>
-                    {speaker.results.map((result) => (
+                    {speaker?.results?.map((result) => (
                         <div key={result.id} className={styles.speaker}>
                             <img
                                 src={result.picture.thumbnail_url}
