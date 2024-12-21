@@ -39,7 +39,6 @@ export async function generateMetadata({ params }) {
             },
         };
     } catch (error) {
-        // Fallback metadata if the event fetch fails
         return {
             title: "GDG PCE",
             description: "Join us for this exciting event!",
@@ -59,18 +58,15 @@ export default async function UserPage({ params }) {
         const speakerResponse = await fetch(`https://gdg.community.dev/api/event_person/?event=${slug}`);
         const speaker = await speakerResponse.json();
 
-        console.log(eventResponse.ok);
         if(!eventResponse.ok) throw new Error("Something went wrong");
         if(!speakerResponse) throw new Error("Something went wrong");   
 
         return (
             <div>
-                {/* Pass error as false when data is successfully fetched */}
                 <ClientComponent event={event} speaker={speaker} error={false} />
             </div>
         );
     } catch (error) {
-        // Pass error as true if fetching fails
         return (
             <div>
                 <ClientComponent event={null} speaker={null} error={true} />

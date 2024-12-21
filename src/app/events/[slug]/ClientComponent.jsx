@@ -13,7 +13,7 @@ import {
 } from "@ant-design/icons";
 
 export default function ClientComponent({ event, speaker, error }) {
-    const router = useRouter();  // Use for redirecting
+    const router = useRouter(); // Use for redirecting
     const leftRef = useRef(null);
     const rightRef = useRef(null);
     const [isSticky, setIsSticky] = useState(true);
@@ -22,21 +22,24 @@ export default function ClientComponent({ event, speaker, error }) {
     // Redirect if error is true
     useEffect(() => {
         if (error) {
-            router.push("/events");  // Redirect to /events page if error is true
+            router.push("/events"); // Redirect to /events page if error is true
         }
     }, [error, router]);
 
     // Format date on the client
     useEffect(() => {
         if (event?.start_date_iso) {
-            const date = new Date(event.start_date_iso).toLocaleString("en-US", {
-                year: "numeric",
-                month: "short",
-                day: "numeric",
-                hour: "numeric",
-                minute: "numeric",
-                hour12: true,
-            });
+            const date = new Date(event.start_date_iso).toLocaleString(
+                "en-US",
+                {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                    hour: "numeric",
+                    minute: "numeric",
+                    hour12: true,
+                }
+            );
             setFormattedDate(date);
         }
     }, [event?.start_date_iso]);
@@ -60,7 +63,21 @@ export default function ClientComponent({ event, speaker, error }) {
     if (error) {
         return <p>Redirecting to events page...</p>;
     }
-
+    const handleShare = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: "Share with your friends!",
+                    text:
+                        "I'm attending Google Developer Groups GDG on Campus Pillai College of Engineering - Navi Mumbai, India : " + event.title + " on " + formattedDate,
+                    url: window.location.href,
+                });
+                console.log("Shared successfully!");
+            } catch (error) {
+                console.error("Error sharing:", error);
+            }
+        }
+    };
     return (
         <div className={styles.page}>
             <div className={styles.container}>
@@ -68,10 +85,38 @@ export default function ClientComponent({ event, speaker, error }) {
                 <h1>{event.title}</h1>
                 <p>{event.description_short}</p>
                 <div className={styles.socialsShare}>
-                    <FacebookFilled />
-                    <TwitterSquareFilled />
-                    <LinkedinFilled />
-                    <ShareAltOutlined />
+                    <FacebookFilled
+                        onClick={() =>
+                            window.open(
+                                "https://facebook.com/sharer.php?u=" +
+                                    window.location.href,
+                                "_blank"
+                            )
+                        }
+                    />
+                    <TwitterSquareFilled
+                        onClick={() =>
+                            window.open(
+                                "https://twitter.com/intent/tweet?url=" +
+                                    window.location.href +
+                                    "&text=I%27m%20attending%20Google%20Developer%20Groups%20GDG%20on%20Campus%20Pillai%20College%20of%20Engineering%20-%20Navi%20Mumbai%2C%20India%20%3A%20" +
+                                    encodeURIComponent(event.title) +
+                                    " on " +
+                                    encodeURIComponent(formattedDate),
+                                "_blank"
+                            )
+                        }
+                    />
+                    <LinkedinFilled
+                        onClick={() =>
+                            window.open(
+                                "https://www.linkedin.com/shareArticle?mini=true&url=" +
+                                    encodeURIComponent(window.location.href),
+                                "_blank"
+                            )
+                        }
+                    />
+                    <ShareAltOutlined onClick={handleShare} />
                 </div>
             </div>
             <div className={styles.info}>
@@ -83,7 +128,7 @@ export default function ClientComponent({ event, speaker, error }) {
                         <UserOutlined /> {event.total_attendees} Attendees
                     </h4>
                 </div>
-                <button>RSVP Now</button>
+                <button onClick={() => window.open(event.cohost_registration_url, "_parent")}>RSVP Now</button>
             </div>
             <div className={styles.section}>
                 <div className={styles.left} ref={leftRef}>
@@ -104,7 +149,9 @@ export default function ClientComponent({ event, speaker, error }) {
                             <h3>
                                 {result.first_name} {result.last_name}
                             </h3>
-                            <p dangerouslySetInnerHTML={{ __html: result.bio }}></p>
+                            <p
+                                dangerouslySetInnerHTML={{ __html: result.bio }}
+                            ></p>
                         </div>
                     ))}
                     <h1>Tags</h1>
@@ -113,9 +160,9 @@ export default function ClientComponent({ event, speaker, error }) {
                             .slice()
                             .sort((a, b) => a.length - b.length)
                             .map((tag, index) => (
-                                <span key={index} className={styles.tag}>
+                                <div key={index} className={styles.tag}>
                                     {tag}
-                                </span>
+                                </div>
                             ))}
                     </div>
                 </div>
