@@ -6,8 +6,9 @@
     height: 100px;
     padding: 0 60px;
     z-index: 10;
-    position: absolute;
-    /* border-bottom: 0.006px solid #9874F5; */
+    position: relative;
+    top: 0;
+
 }
 
 .logo{

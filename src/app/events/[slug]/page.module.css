@@ -1,0 +1,173 @@
+.page {
+    position: absolute;
+    width: 100%;
+}
+.container {
+    width: 100%;
+    border-top: 1px solid #383a3d;
+    padding: 40px 120px;
+}
+
+.container img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.container h1 {
+    font-size: var(--f4);
+    margin: 20px 0;
+}
+
+.container p {
+    white-space: pre-wrap;
+}
+
+.socialsShare {
+    font-size: var(--f3);
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.info {
+    background-color: #55585c;
+    width: 100%;
+    padding: 20px 120px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+.info div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    background-color: #eee;
+    color: var(--primary);
+    cursor: pointer;
+    float: right;
+    position: relative;
+    right: 0;
+    font-size: var(--f1);
+    font-weight: 500;
+}
+
+.info button:hover {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100vw;
+    display: flex;
+    padding: 40px 120px;
+    gap: 10px;
+}
+
+/* Left Div */
+.left {
+    /* background-color: red; */
+    flex: 0 0 60%;
+    /* height: 100vh; */
+    padding: 40px;
+    overflow: auto;
+    border: 1px solid #64686e;
+    border-radius: 15px;
+}
+
+/* Right Div */
+.right {
+    /* background-color: green; */
+    flex: 0 0 40%;
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    padding: 40px;
+}
+
+.content {
+    line-height: var(--f4);
+    font-size: var(--f2);
+    margin: 20px 0;
+}
+
+.speaker {
+    width: 100%;
+    padding: 20px 0;
+    margin: 20px 0;
+    font-size: var(--f2);
+}
+
+.speaker img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+.speaker h3 {
+    margin: 10px 0;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.tags tag {
+    padding: 7px 15px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 40px 40px;
+}
+.info {
+  padding: 40px;
+  flex-direction: column;
+
+}
+.info div {
+  flex-direction: column;
+}
+
+    .section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left,
+    .right {
+        flex: 0 0 100%;
+    }
+
+    /* Left Div */
+.left, .right {
+  padding: 30px;
+}
+
+/* Right Div */
+.right {
+  text-align: center;
+}
+
+.tags {
+  justify-content: center;
+}
+
+.tags tag {
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  font-size: 0.9rem;
+}
+}
