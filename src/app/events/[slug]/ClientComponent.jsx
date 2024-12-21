@@ -1,6 +1,7 @@
 "use client";
-import { useRouter } from "next/navigation";
+
 import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/navigation"; // for redirecting
 import styles from "./page.module.css";
 import {
     FacebookFilled,
@@ -12,28 +13,26 @@ import {
 } from "@ant-design/icons";
 
 export default function ClientComponent({ event, speaker, error }) {
+    const router = useRouter();  // Use for redirecting
     const leftRef = useRef(null);
     const rightRef = useRef(null);
     const [isSticky, setIsSticky] = useState(true);
     const [formattedDate, setFormattedDate] = useState("");
-    const [hasError, setHasError] = useState(error); // Track error state
-    const router = useRouter();
 
-    // Always call this hook
+    // Redirect if error is true
     useEffect(() => {
-        if (hasError) {
-            // If error is true, redirect to the /events page
-            router.push("/events");
+        if (error) {
+            router.push("/events");  // Redirect to /events page if error is true
         }
-    }, [hasError, router]);
+    }, [error, router]);
 
-    // Redirecting state check
-    if (hasError) {
-        return <p>Redirecting...</p>;
+    // If error is true, render error message
+    if (error) {
+        return <p>Redirecting to events page...</p>;
     }
 
-    // Format date on the client
     useEffect(() => {
+        // Format date on the client
         if (event?.start_date_iso) {
             const date = new Date(event.start_date_iso).toLocaleString("en-US", {
                 year: "numeric",
@@ -45,9 +44,8 @@ export default function ClientComponent({ event, speaker, error }) {
             });
             setFormattedDate(date);
         }
-    }, [event]);
+    }, [event?.start_date_iso]);
 
-    // Scroll behavior effect
     useEffect(() => {
         const handleScroll = () => {
             if (!leftRef.current || !rightRef.current) return;
@@ -61,11 +59,6 @@ export default function ClientComponent({ event, speaker, error }) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    // If event data is not available
-    if (!event) {
-        return <p>Loading...</p>;
-    }
 
     return (
         <div className={styles.page}>
