@@ -1,5 +1,5 @@
 "use client";
-
+import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import styles from "./page.module.css";
 import {
@@ -11,11 +11,25 @@ import {
     UserOutlined,
 } from "@ant-design/icons";
 
-export default function ClientComponent({ event, speaker }) {
+export default function ClientComponent({ event, speaker, error }) {
+
     const leftRef = useRef(null);
     const rightRef = useRef(null);
     const [isSticky, setIsSticky] = useState(true);
     const [formattedDate, setFormattedDate] = useState("");
+
+    const router = useRouter();
+
+    useEffect(() => {
+        if (error) {
+            // If error is true, redirect to the /events page
+            router.push("/events");
+        }
+    }, [error, router]);
+
+    if (error) {
+        return <p>Redirecting...</p>;
+    }
 
     useEffect(() => {
         // Format date on the client
