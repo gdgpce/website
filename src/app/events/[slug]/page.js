@@ -1,4 +1,9 @@
-import ClientComponent from "./ClientComponent";
+// import ClientComponent from "./ClientComponent";
+import dynamic from "next/dynamic";
+const ClientComponent = dynamic(() => import("./ClientComponent"), {
+  ssr: false,
+});
+
 
 export default async function UserPage({ params }) {
     const { slug } = params;
