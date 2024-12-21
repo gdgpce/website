@@ -12,28 +12,29 @@ import {
 } from "@ant-design/icons";
 
 export default function ClientComponent({ event, speaker, error }) {
-
     const leftRef = useRef(null);
     const rightRef = useRef(null);
     const [isSticky, setIsSticky] = useState(true);
     const [formattedDate, setFormattedDate] = useState("");
-
+    const [hasError, setHasError] = useState(error); // Track error state
     const router = useRouter();
 
+    // Always call this hook
     useEffect(() => {
-        if (error) {
+        if (hasError) {
             // If error is true, redirect to the /events page
             router.push("/events");
         }
-    }, [error, router]);
+    }, [hasError, router]);
 
-    if (error) {
+    // Redirecting state check
+    if (hasError) {
         return <p>Redirecting...</p>;
     }
 
+    // Format date on the client
     useEffect(() => {
         if (event?.start_date_iso) {
-            // Format date on the client
             const date = new Date(event.start_date_iso).toLocaleString("en-US", {
                 year: "numeric",
                 month: "short",
@@ -46,6 +47,7 @@ export default function ClientComponent({ event, speaker, error }) {
         }
     }, [event]);
 
+    // Scroll behavior effect
     useEffect(() => {
         const handleScroll = () => {
             if (!leftRef.current || !rightRef.current) return;
@@ -60,6 +62,7 @@ export default function ClientComponent({ event, speaker, error }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // If event data is not available
     if (!event) {
         return <p>Loading...</p>;
     }
