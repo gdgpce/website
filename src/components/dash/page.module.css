@@ -6,14 +6,20 @@
     padding: 15px 0;
 }
 .a{
-    height: 4px;
+    height: 3px;
     width: 40px;
     background-color: var(--c3);
 }
 
 .b{
-    height: 7px;
+    height: 6px;
     width: 7px;
     background-color: var(--c3);
     transform: rotate(45deg);
+}
+
+.c{
+    height: 3px;
+    width: 160px;
+    background-color: var(--c3);
 }

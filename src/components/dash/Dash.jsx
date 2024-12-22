@@ -29,7 +29,15 @@ const CenteredDash = () => {
         </div>
     );
   };
+
+  const LongDash = () => {
+    return (
+        <div className={styles.dash}>
+            <div className={styles.c}></div>
+        </div>
+    );
+  };
   
   // Export the components
-  export { CenteredDash, DottedDash, SideDash };
+  export { CenteredDash, DottedDash, SideDash, LongDash };
   

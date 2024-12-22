@@ -22,6 +22,7 @@
     font-size: 1.25rem;
     max-width: 540px;
     padding: 10px 0;
+    line-height: 1.875rem;
 }
 
 .hero .con .left .join {
@@ -63,4 +64,218 @@
         bottom: -10px;
         width: 600px;
     }
+}
+
+
+/* Vision Styles */
+
+.visions {
+
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 130px 100px;
+    text-align: left;
+}
+
+.visions .visionItem {
+    font-size: 1.25rem;
+    padding: 30px 0px;
+    line-height: 1.875rem;
+}
+.visions .visionItem:nth-child(1){
+    padding-right: 50px;
+}
+.visions .visionItem:nth-child(2) {
+    padding: 0px 50px;
+    border-left: 1px solid var(--b1);
+    border-right: 1px solid var(--b1);    
+}
+.visions .visionItem:nth-child(3) {
+    padding-left:  50px;
+}
+
+.visionItem h2 {
+    font-size: 1.75rem;
+    padding: 10px 0;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Styles */
+
+.about {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.about .con {
+    margin: 10px 100px 0;
+}
+.about .con .left {
+
+}
+
+.about .con .right {
+
+}
+
+.about .con .left .heading {
+    font-size: 2.5rem;
+    font-weight:700;  
+}
+
+.about .con .left .heading span {
+    font-weight:400;  
+}
+
+.about .con .left .para {
+    font-size: 1.25rem;
+    max-width: 540px;
+    padding: 10px 0;
+    line-height: 1.875rem;
+    color: var(--b3);
+}
+
+.about .con .left .meet {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    font-weight:700;  
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.about .con .left .meet:hover {
+    
+}
+.about .con .left .meet span{
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--c3);
+}
+
+/* What We Do Styles */
+
+.work {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.work .con {
+    margin: 10px 100px 0;
+    display: flex;
+}
+.work .con .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.work .con .left .heading {
+    font-size: 2.5rem;
+    font-weight:600;  
+    color: var(--c3);
+    padding-top: 10px;
+}
+
+.work .con .left .para {
+    font-size: 1.25rem;
+    max-width: 540px;
+    padding: 0px 0;
+    line-height: 1.875rem;
+    color: var(--b3);
+}
+
+.work .con .right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: flex-start;
+
+}
+
+.work .con .right .heading {
+    font-size: 2.5rem;
+    font-weight:700;  
+}
+
+.work .con .right .heading span {
+    font-weight:400;  
+}
+
+.work .con .right .para {
+    font-size: 1.25rem;
+    max-width: 540px;
+    padding: 10px 0;
+    line-height: 1.875rem;
+    color: var(--b3);
+}
+
+
+.work .con .right .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+}
+
+.work .con .right .container .a{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.work .con .right .container .b{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.work .con .right .container .b .button{
+    margin-top: 2.5rem;
+    font-size: 1rem;
+    font-weight:700;  
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid var(--b1);
+    padding: 10px 20px;
+}
+
+.work .con .right .container .b .button span{
+    padding-left: 0.5rem;
+    font-size: 1.2rem;
+    color: var(--c3);
 }

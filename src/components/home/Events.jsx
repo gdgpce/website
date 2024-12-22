@@ -1,8 +1,8 @@
 import styles from "./page.module.css";
 
-export default function Hero() {
+export default function Events() {
     return (
-        <div>
+        <div className={styles.Event}>
             
         </div>
     );

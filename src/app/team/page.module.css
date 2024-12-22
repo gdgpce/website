@@ -22,13 +22,10 @@
 
 .team {
     display: flex;
-
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center ;
+    align-items: first baseline;
     justify-content: center;
-    
-    /* gap: 1rem; */
 }
 
 
