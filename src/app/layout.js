@@ -3,6 +3,7 @@ import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/header/Header";
 // import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
+
 const googleSans = localFont({
     src: [
       { path: './fonts/GoogleSans-Regular.ttf', weight: '400', style: 'normal' },

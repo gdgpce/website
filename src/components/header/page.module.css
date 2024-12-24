@@ -22,9 +22,113 @@
 
 @media screen and (max-width: 768px) {
     .header{
-        padding: 0 40px;
+        padding: 0 30px;
     }
     .logo h3{
         font-size: 1.125rem;
     }
+
+    .logo img{
+        width: 60px;
+    }
+}
+
+
+
+
+.button {
+    
+    background: transparent;
+    border: 0;
+    width: 56px;
+    height: 56px;
+    display: none;
+    place-items: center;
+    cursor: pointer;
+    padding: 0;
+    /* opacity: 0.6; */
+    scale: 0.7;
+    border-radius: 8px;
+    transition: 0.25s;
+    z-index: 1002;
+  }
+
+  .burger {
+    scale: 1.45;
+    position: relative;
+    width: 32px;
+    border: 0;
+  }
+  
+  .burger,
+  .burger::before,
+  .burger::after {
+    display: block;
+    border-radius: 2px;
+    height: 2.5px;
+    background: var(--secondary);
+    transition: 0.3s;
+  }
+  
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+  
+  .burger::before {
+    top: -8px;
+  }
+  
+  .burger::after {
+    top: 8px;
+  }
+  
+  
+  .burger.burger2,
+  .burger.burger2::before,
+  .burger.burger2::after {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+  }
+  
+  .burger.burger2::before,
+  .burger.burger2::after {
+    width: 16px;
+  }
+  
+  .burger.burger2::before {
+    left: 0;
+    transform-origin: 100% 0%;
+  }
+  
+  .burger.burger2::after {
+    left: 16px;
+    transform-origin: 0% 100%;
+  }
+  
+  .burger.burger2.isClosed {
+    transform: rotate(-45deg);
+  }
+  
+  .burger.burger2.isClosed::before {
+    transform: rotate(90deg) translate(10px, -1px);
+  }
+  
+  .burger.burger2.isClosed::after {
+    transform: rotate(90deg) translate(-9px, 1px);
+    width: 16px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .header{
+        padding: 0 30px;
+    }
+    .button {
+        display: grid;
+    }
+    
 }

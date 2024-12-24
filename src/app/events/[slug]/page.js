@@ -51,7 +51,7 @@ export default async function UserPage({ params }) {
 
     try {
         // Fetch event data
-        const eventResponse = await fetch(`https://gdg.community.dev/api/event_slim/${slug}`);
+        const eventResponse = await fetch(`https://gdg.community.dev/api/event_slim/${slug}`, { next: { revalidate: 3600 } });
         const event = await eventResponse.json();
 
         // Fetch speaker data

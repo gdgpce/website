@@ -45,7 +45,7 @@ const EventList = () => {
           slug={event.slug}
           date={event.start_date}
           title={event.event_type_title}
-          description={event.description_short}
+          description={event.title}
           imageUrl={event.cropped_picture_url}
         />
       ))}
