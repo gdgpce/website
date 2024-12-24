@@ -1,0 +1,9 @@
+.cardCon {
+    /* border: 1px solid #e0e0e0; */
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+}
