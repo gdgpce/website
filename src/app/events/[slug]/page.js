@@ -1,76 +1,89 @@
-import dynamic from "next/dynamic";
+"use client";
 
-const ClientComponent = dynamic(() => import("./ClientComponent"), {
-  ssr: false,
-});
+import { useEffect, useRef, useState } from "react";
+import styles from "./page.module.css";
+import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
+import EventCard from "@/components/eventcard/EventCard";
+import { Button } from "antd";
 
-// Metadata export for Next.js
-export async function generateMetadata({ params }) {
-    const { slug } = params;
+const EventList = ({ events, loading, error }) => {
+  return (
+    <>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
+      <div className={styles.eventCardsContainer}>
+        {events.map((event) => (
+          <EventCard
+            key={event.slug}
+            slug={event.slug}
+            date={new Date(event.start_date).toLocaleDateString()}
+            eventType={event.event_type_title}
+            title={event.title}
+            imageUrl={event.cropped_picture_url}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
 
+const EventsPage = () => {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+  const [nextPage, setNextPage] = useState(null);
+  const hasFetched = useRef(false);
+
+  const initialURL =
+    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=3&status=Completed&order=-start_date&fields=title,start_date,event_type_title,cropped_picture_url,slug";
+
+  const fetchEvents = async (url) => {
+    setLoading(true);
     try {
-        // Fetch event data
-        const eventResponse = await fetch(`https://gdg.community.dev/api/event_slim/${slug}`);
-        const event = await eventResponse.json();
-
-        // Fetch speaker data
-        const speakerResponse = await fetch(`https://gdg.community.dev/api/event_person/?event=${slug}`);
-        const speaker = await speakerResponse.json();
-
-        // Dynamically set metadata
-        return {
-            title: event.title || "Event Details",
-            description: event.description_short || "Join us for this exciting event!",
-            openGraph: {
-                title: event.title || "GDG PCE",
-                description: event.description_short || "Join us for this exciting event!",
-                images: [
-                    {
-                        url: event.cropped_picture_url || "/default-banner.png", // Provide a fallback if no image
-                        width: 630,
-                        height: 630,
-                    },
-                ],
-            },
-            twitter: {
-                title: event.title || "GDG PCE",
-                description: event.description_short || "Join us for this exciting event!",
-                images: [event.cropped_banner_url || "/default-banner.png"],
-            },
-        };
-    } catch (error) {
-        return {
-            title: "GDG PCE",
-            description: "Join us for this exciting event!",
-        };
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch events: ${response.status}`);
+      }
+      const data = await response.json();
+      setEvents((prev) => [...prev, ...data.results]);
+      setNextPage(data.links?.next || null);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setLoading(false);
     }
-}
+  };
 
-export default async function UserPage({ params }) {
-    const { slug } = params;
-
-    try {
-        // Fetch event data
-        const eventResponse = await fetch(`https://gdg.community.dev/api/event_slim/${slug}`);
-        const event = await eventResponse.json();
-
-        // Fetch speaker data
-        const speakerResponse = await fetch(`https://gdg.community.dev/api/event_person/?event=${slug}`);
-        const speaker = await speakerResponse.json();
-
-        if(!eventResponse.ok) throw new Error("Something went wrong");
-        if(!speakerResponse) throw new Error("Something went wrong");   
-
-        return (
-            <div>
-                <ClientComponent event={event} speaker={speaker} error={false} />
-            </div>
-        );
-    } catch (error) {
-        return (
-            <div>
-                <ClientComponent event={null} speaker={null} error={true} />
-            </div>
-        );
+  useEffect(() => {
+    if (!hasFetched.current) {
+      fetchEvents(initialURL);
+      hasFetched.current = true;
     }
-}
+  }, []);
+
+  const handleLoadMore = () => {
+    if (nextPage) {
+      fetchEvents(nextPage);
+    }
+  };
+
+  return (
+    <div>
+      <div className={styles.headerCon}>
+        <Breadcrumb title="Events" />
+      </div>
+      <div className={styles.cardCon}>
+        <EventList events={events} loading={loading} error={error} />
+        {nextPage && (
+          <div className={styles.loadMoreButtonContainer}>
+            <Button onClick={handleLoadMore} disabled={loading}>
+              {loading ? "Loading..." : "Load More"}
+            </Button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default EventsPage;

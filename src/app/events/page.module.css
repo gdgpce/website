@@ -20,6 +20,23 @@
     width: 100%; /* Full width for cards */
   }
   
+  .headerCon {
+    margin-bottom: 20px; /* Space below header */
+  }
+  
+  .cardCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+  
+  .eventCardsContainer {
+    display: grid; /* Use grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
+    gap: 10px; /* Space between cards */
+    width: 80%; /* Set width for the container */
+  }
+  
   .loadMoreButtonContainer {
     margin-top: 20px; /* Space above the button */
   }
@@ -28,4 +45,5 @@
     background-color: #1890ff; /* Ant Design primary color */
     color: white; /* Text color */
   }
+  
   

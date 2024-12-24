@@ -6,7 +6,28 @@ import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import EventCard from "@/components/eventcard/EventCard";
 import { Button } from "antd";
 
-const EventList = () => {
+const EventList = ({ events, loading, error }) => {
+  return (
+    <>
+      {loading && <p>Loading...</p>}
+      {error && <p>Error: {error.message}</p>}
+      <div className={styles.eventCardsContainer}>
+        {events.map((event) => (
+          <EventCard
+            key={event.slug}
+            slug={event.slug}
+            date={new Date(event.start_date).toLocaleDateString()}
+            eventType={event.event_type_title}
+            title={event.title}
+            imageUrl={event.cropped_picture_url}
+          />
+        ))}
+      </div>
+    </>
+  );
+};
+
+const EventsPage = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -40,38 +61,26 @@ const EventList = () => {
     }
   }, []);
 
-  return (
-    <>
-      {loading && <p>Loading...</p>}
-      {error && <p>Error: {error.message}</p>}
-      {events.map((event) => (
-        <EventCard
-          key={event.slug}
-          slug={event.slug}
-          date={new Date(event.start_date).toLocaleDateString()}
-          eventType={event.event_type_title}
-          title={event.title}
-          imageUrl={event.cropped_picture_url}
-        />
-      ))}
-      {nextPage && (
-        <Button onClick={() => fetchEvents(nextPage)} disabled={loading}>
-          {loading ? "Loading..." : "Load More"}
-        </Button>
-      )}
-    </>
-  );
-};
+  const handleLoadMore = () => {
+    if (nextPage) {
+      fetchEvents(nextPage);
+    }
+  };
 
-const EventsPage = () => {
   return (
     <div>
       <div className={styles.headerCon}>
         <Breadcrumb title="Events" />
       </div>
       <div className={styles.cardCon}>
-        <EventList />
-        
+        <EventList events={events} loading={loading} error={error} />
+        {nextPage && (
+          <div className={styles.loadMoreButtonContainer}>
+            <Button onClick={handleLoadMore} disabled={loading}>
+              {loading ? "Loading..." : "Load More"}
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   );
