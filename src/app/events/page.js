@@ -41,8 +41,9 @@ const EventList = () => {
     <>
       {events.map((event) => (
         event.start_date = setDate(event.start_date),
+        console.log(event.slug),
         <EventCard
-          key={event.slug}
+          slug={event.slug}
           date={event.start_date}
           title={event.event_type_title}
           description={event.description_short}
