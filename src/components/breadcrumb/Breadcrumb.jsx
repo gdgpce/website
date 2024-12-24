@@ -9,9 +9,9 @@ export default function Breadcrumb(props) {
             <img className={styles.hexImg} src="/hex-bg.png" alt="hex-bg" />
             <div className={styles.con}>
                 <h1>{props.title}</h1>
-                <CenteredDash className={styles.dashing} />
+                <CenteredDash />
                 <div className={styles.breadcrumb}>
-                    <p>Home </p> <img src="/right-arrow-2.svg" width={16} height={16} alt="rightArrow" /> <p> {props.title}</p>
+                    <p>Home </p> <img src="/right-arrow-2.svg" className={styles.arrow} alt="rightArrow" /> <p> {props.title}</p>
                 </div>
             </div>
         </section>

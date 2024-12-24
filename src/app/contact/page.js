@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
 export default function Contact() {
   return (
     <div>
-      <Breadcrumb title="Contact Us" />
+      <Breadcrumb title="Contact" />
     </div>
   );
 }

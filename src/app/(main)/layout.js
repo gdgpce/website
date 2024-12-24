@@ -10,7 +10,7 @@ export default function MainLayout({ children }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false); // Hide loading screen after 3 seconds
-    }, 2200);
+    }, 2500);
 
     // Clean up the timer on component unmount
     return () => clearTimeout(timer);

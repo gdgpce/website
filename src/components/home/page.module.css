@@ -2,8 +2,8 @@
 
 .hero {
     /* height: 100vh; */
-    width: 100%;
-
+    width: 100vw;
+    overflow: none;
 }
 
 .hero .con {
@@ -38,11 +38,12 @@
 
 .hero img {
     position: absolute;
-    /* right: 0; */
-    left: 0;
+    right: 0;
+    /* left: 0; */
     width: 100vw;
     bottom: -50px;
     z-index: -1;
+
 }
 
 @media screen and (max-width: 768px) {
@@ -67,6 +68,8 @@
     .hero img {
         bottom: -10px;
         width: 768px;
+        right: 0;
+
     }
 }
 
