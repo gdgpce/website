@@ -44,7 +44,7 @@ const Hamburger = () => {
     <div className={styles.container}>
       {!isOpen && (
         <div className={styles.iconWrapper} onClick={toggleMenu}>
-          <MenuOutlined className={styles.burgerIcon} />
+          {/* <MenuOutlined className={styles.burgerIcon} /> */}
         </div>
       )}
       <div

@@ -1,0 +1,79 @@
+/* Mobile Navigation */
+.mobileNav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.mobileNav nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.mobileNav.open {
+    right: 0;
+}
+
+.mobileNav a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: var(--f2);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.mobileNav a::after {
+    content: '';
+    border-radius: 6px;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--c3);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+}
+
+.mobileNav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+}
+
+.mobileNav a.active::after {
+    content: '';
+    border-radius: 6px;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--c3);
+    transform-origin: bottom;
+    transition: transform 0.25s ease;
+}
+
+/* Show mobile navigation on smaller screens */
+@media screen and (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+}

@@ -8,7 +8,7 @@
     cursor: pointer;
     display: none; /* Hidden by default for larger screens */
     z-index: 1001;
-    position: fixed; /* Keeps the icon fixed */
+    position: fixed; 
     top: 20px; /* Adjust this to control vertical spacing */
     right: 20px; /* Adjusted for the right side */
 }
@@ -107,3 +107,4 @@
         display: none;
     }
 }
+

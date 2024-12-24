@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
 export default function Sponsors() {
   return (
     <div>
-      <Breadcrumb title="Our Sponsors" />
+      <Breadcrumb title="Sponsors" />
     </div>
   );
 }
