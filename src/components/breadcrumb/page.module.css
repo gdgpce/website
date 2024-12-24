@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     mix-blend-mode: exclusion;
-    position: absolute;
+    position: relative;
     top: 0;
     display: flex;
     flex-direction: column;
