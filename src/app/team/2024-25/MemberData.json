@@ -1,0 +1,197 @@
+{
+    "Management": [
+      {
+        "Name": "Hemant Waghmare",
+        "Position": "Management",
+        "ImagePath": "2024-25/HemantWaghmare"
+      },
+      {
+        "Name": "Sanjana Menon",
+        "Position": "Management",
+        "ImagePath": "2024-25/SanjanaMenon"
+      },
+      {
+        "Name": "Tanishka Jagnivas",
+        "Position": "Management",
+        "ImagePath": "2024-25/TanishkaJagnivas"
+      },
+      {
+        "Name": "Rudra Mayuresh Joshi",
+        "Position": "Management",
+        "ImagePath": "2024-25/RudraMayureshJoshi"
+      },
+      {
+        "Name": "Arnav Deka",
+        "Position": "Management",
+        "ImagePath": "2024-25/ArnavDeka"
+      }
+    ],
+    "Graphics": [
+      {
+        "Name": "Ayush Duduskar",
+        "Position": "Graphics",
+        "ImagePath": "2024-25/AyushDuduskar"
+      },
+      {
+        "Name": "Swaraj More",
+        "Position": "Graphics",
+        "ImagePath": "2024-25/SwarajMore"
+      },
+      {
+        "Name": "Parth Ramesh Bamane",
+        "Position": "Graphics",
+        "ImagePath": "2024-25/ParthRameshBamane"
+      },
+      {
+        "Name": "Purva Devidas Badekar",
+        "Position": "Graphics",
+        "ImagePath": "2024-25/PurvaDevidasBadekar"
+      },
+      {
+        "Name": "Rutwa Mokal",
+        "Position": "Graphics",
+        "ImagePath": "2024-25/RutwaMokal"
+      }
+    ],
+    "Content": [
+      {
+        "Name": "Navin Choudhary",
+        "Position": "Content",
+        "ImagePath": "2024-25/NavinChoudhary"
+      },
+      {
+        "Name": "Nandan Pradip Tandel",
+        "Position": "Content",
+        "ImagePath": "2024-25/NandanPradipTandel"
+      }
+    ],
+    "Coverage": [
+      {
+        "Name": "Vijay Vishwanathan",
+        "Position": "Coverage",
+        "ImagePath": "2024-25/VijayVishwanathan"
+      },
+      {
+        "Name": "Anjali Raikar",
+        "Position": "Coverage",
+        "ImagePath": "2024-25/AnjaliRaikar"
+      },
+      {
+        "Name": "Jidnyasa Kalaskar",
+        "Position": "Coverage",
+        "ImagePath": "2024-25/JidnyasaKalaskar"
+      },
+      {
+        "Name": "Jayesh Sonar",
+        "Position": "Coverage",
+        "ImagePath": "2024-25/JayeshSonar"
+      }
+    ],
+    "Technical": [
+      {
+        "Name": "Aryan V Khokale",
+        "Position": "Technical",
+        "ImagePath": "2024-25/AryanVKhokale"
+      },
+      {
+        "Name": "Avani Srivastav",
+        "Position": "Technical",
+        "ImagePath": "2024-25/AvaniSrivastav"
+      },
+      {
+        "Name": "Basawaraj V",
+        "Position": "Technical",
+        "ImagePath": "2024-25/BasawarajV"
+      },
+      {
+        "Name": "Shridhar Ganesh Khare",
+        "Position": "Technical",
+        "ImagePath": "2024-25/ShridharGaneshKhare"
+      },
+      {
+        "Name": "Suyash Thanage",
+        "Position": "Technical",
+        "ImagePath": "2024-25/SuyashThanage"
+      },
+      {
+        "Name": "Suyash Ware",
+        "Position": "Technical",
+        "ImagePath": "2024-25/SuyashWare"
+      },
+      {
+        "Name": "Dnynesh M",
+        "Position": "Technical",
+        "ImagePath": "2024-25/DnyneshM"
+      },
+      {
+        "Name": "Grahish",
+        "Position": "Technical",
+        "ImagePath": "2024-25/Grahish"
+      },
+      {
+        "Name": "Krishna Agrawal",
+        "Position": "Technical",
+        "ImagePath": "2024-25/KrishnaAgrawal"
+      },
+      {
+        "Name": "Saket Singh",
+        "Position": "Technical",
+        "ImagePath": "2024-25/SaketSingh"
+      }
+    ],
+    "Marketing": [
+      {
+        "Name": "Ameya Kavishwar",
+        "Position": "Marketing",
+        "ImagePath": "2024-25/AmeyaKavishwar"
+      },
+      {
+        "Name": "Abhijay Anilan Puthan Veedu",
+        "Position": "Marketing",
+        "ImagePath": "2024-25/AbhijayAnilanPuthanVeedu"
+      },
+      {
+        "Name": "Sejal Bhanushali",
+        "Position": "Marketing",
+        "ImagePath": "2024-25/SejalBhanushali"
+      },
+      {
+        "Name": "Krishna Madinkumar",
+        "Position": "Marketing",
+        "ImagePath": "2024-25/KrishnaMadinkumar"
+      }
+    ],
+    "Publicity": [
+      {
+        "Name": "Shabarinath Raghunath",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/ShabarinathRaghunath"
+      },
+      {
+        "Name": "Tanvi Santosh Harde",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/TanviSantoshHarde"
+      },
+      {
+        "Name": "CNS Manaswini",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/CNSManaswini"
+      },
+      {
+        "Name": "Yashika Singh",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/YashikaSingh"
+      },
+      {
+        "Name": "Thombre Shalmali Atul",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/ThombreShalmaliAtul"
+      },
+      {
+        "Name": "Manish Santosh Dhole",
+        "Position": "Publicity",
+        "ImagePath": "2024-25/ManishSantoshDhole"
+      }
+    ]
+  }
+  
