@@ -6,6 +6,13 @@ import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import EventCard from "@/components/eventcard/EventCard";
 import { Button } from "antd";
 
+
+const setDate = (date) => {
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const formattedDate = new Date(date).toLocaleDateString("en-US", options);
+  return formattedDate.replace(/(\d{1,2}) (\w{3})/, '$2 $1,'); // Rearranging to "Dec 12, 2024"
+};
+
 const EventList = ({ events, loading, error }) => {
   return (
     <>
@@ -16,7 +23,7 @@ const EventList = ({ events, loading, error }) => {
           <EventCard
             key={event.slug}
             slug={event.slug}
-            date={new Date(event.start_date).toLocaleDateString()}
+            date={setDate(event.start_date)}
             eventType={event.event_type_title}
             title={event.title}
             imageUrl={event.cropped_picture_url}
