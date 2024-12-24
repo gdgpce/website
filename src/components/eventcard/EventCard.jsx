@@ -4,7 +4,7 @@ import styles from './EventCard.module.css';
 
 
 
-const EventCard = ({ slug, date, title, description, imageUrl }) => {  
+const EventCard = ({ slug, date, title, eventType, imageUrl }) => {  
   // const eventSlug = slug;
   const router = useRouter();
   const handleRedirect = (eventSlug) => {
@@ -22,8 +22,8 @@ const EventCard = ({ slug, date, title, description, imageUrl }) => {
         </div>
         <div className={styles.content}>
           <h3 className={styles.date}>{date}</h3>
-          <h3 className={styles.title}>{title}</h3>
-          <p>{description}</p>
+          <h3 className={styles.eventType}>{eventType}</h3>
+          <p>{title}</p>
         </div>
     </div>
   );

@@ -7,3 +7,25 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+.eventListContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+  }
+  
+  .eventCards {
+    display: grid; /* Use grid for better layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    width: 100%; /* Full width for cards */
+  }
+  
+  .loadMoreButtonContainer {
+    margin-top: 20px; /* Space above the button */
+  }
+  
+  .loadMoreButtonContainer .ant-btn {
+    background-color: #1890ff; /* Ant Design primary color */
+    color: white; /* Text color */
+  }
+  
