@@ -1,6 +1,5 @@
 "use client";
 import styles from "./page.module.css";
-import Header from "@/components/header/Header"
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
 import TeamCard from "@/components/teamcard/TeamCard"
 import { DottedDash } from "@/components/dash/Dash"
@@ -10,7 +9,6 @@ import Hamburger from "@/components/hamburger/Hamburger"
 export default function Team() {
   return (
     <div className={styles.page}>
-      <Header />
       <Breadcrumb title="Team" />
       <div>
         <Hamburger/>

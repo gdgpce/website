@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={googleSans.className}>
                 <NextTopLoader />
-                {/* <Header /> */}
+                <Header />
                 {children}
             </body>
         </html>

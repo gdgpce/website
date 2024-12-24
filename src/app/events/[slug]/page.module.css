@@ -1,5 +1,6 @@
 .page {
     position: absolute;
+    padding-top: 100px;
     width: 100%;
 }
 .container {
@@ -12,6 +13,8 @@
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
+    min-height: 200px;
+    object-fit: cover;
 }
 
 .container h1 {

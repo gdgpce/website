@@ -1,5 +1,6 @@
 "use client";
 
+import Header from "@/components/header/Header";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation"; // for redirecting
 import styles from "./page.module.css";
@@ -139,7 +140,10 @@ export default function ClientComponent({ event, speaker, error }) {
                     ></div>
                 </div>
                 <div className={styles.right} ref={rightRef}>
-                    <h1>Speaker</h1>
+                    {speaker.results.length > 0 && (
+                        <h1>Speaker</h1>
+                    )}
+                    
                     {speaker?.results?.map((result) => (
                         <div key={result.id} className={styles.speaker}>
                             <img
