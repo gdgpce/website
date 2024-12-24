@@ -8,7 +8,7 @@ export default function FAQs() {
   return (
     <div>
       <Header />
-      <Breadcrumb title="Frequently Asked Questions" />
+      <Breadcrumb title="FAQs" />
     </div>
   );
 }

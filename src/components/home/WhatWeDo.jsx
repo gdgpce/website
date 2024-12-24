@@ -22,14 +22,14 @@ export default function WhatWeDo() {
                     </div>
                     <div className={styles.container}>
                         <div className={styles.a}>
-                            <div className={styles.heading}>1400+</div>
-                            <div className={styles.para}>Students connected</div>
+                            <div className={styles.heading2}>1400+</div>
+                            <div className={styles.para2}>Students connected</div>
 
-                            <div className={styles.heading}>700+</div>
-                            <div className={styles.para}>Students connected</div>
+                            <div className={styles.heading2}>5000+</div>
+                            <div className={styles.para2}>Lines of code written</div>
 
-                            <div className={styles.heading}>10+</div>
-                            <div className={styles.para}>Workshops and events</div>
+                            <div className={styles.heading2}>10+</div>
+                            <div className={styles.para2}>Workshops and events</div>
                         </div>
                         <div className={styles.b}>
                             <div className={styles.button}>

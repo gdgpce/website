@@ -6,15 +6,25 @@
     height: 100px;
     padding: 0 100px;
     z-index: 10;
-    position: relative;
+    position: absolute;
     top: 0;
-
 }
 
 .logo{
     display: flex;
+    align-items: center;
     gap: 20px;
 }
+
 .logo img{
     width: 75px;
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        padding: 0 40px;
+    }
+    .logo h3{
+        font-size: 1.125rem;
+    }
 }

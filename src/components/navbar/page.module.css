@@ -9,10 +9,10 @@
     color: var(--secondary);
     text-decoration: none;
     font-size: var(--f2);
+    font-weight: 600;
     display: inline-block;
     position: relative;
     padding-bottom: 15px;
- 
 }
 
 .nav a::after {
@@ -46,4 +46,10 @@
     background-color: var(--c3);
     transform-origin: bottom;
     transition: transform 0.25s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        display: none;
+    }
 }

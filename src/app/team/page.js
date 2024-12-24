@@ -10,7 +10,8 @@ import Hamburger from "@/components/hamburger/Hamburger"
 export default function Team() {
   return (
     <div className={styles.page}>
-      
+      <Header />
+      <Breadcrumb title="Team" />
       <div>
         <Hamburger/>
       </div>

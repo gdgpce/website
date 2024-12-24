@@ -2,17 +2,17 @@
 import styles from "./page.module.css"
 import { CenteredDash, SideDash } from '@/components/dash/Dash';
 
-import { usePathname } from "next/navigation"
 export default function Breadcrumb(props) {
-    const pathname = usePathname();
-    const pagename = pathname.split("/").pop().charAt(0).toUpperCase() + pathname.split("/").pop().slice(1);
-    
+
     return(
         <section className={styles.container}>
+            <img className={styles.hexImg} src="/hex-bg.png" alt="hex-bg" />
             <div className={styles.con}>
                 <h1>{props.title}</h1>
-                <CenteredDash />
-                <p>Home &gt; {pagename}</p>
+                <CenteredDash className={styles.dashing} />
+                <div className={styles.breadcrumb}>
+                    <p>Home </p> <img src="/right-arrow-2.svg" width={16} height={16} alt="rightArrow" /> <p> {props.title}</p>
+                </div>
             </div>
         </section>
     )

@@ -1,12 +1,14 @@
 /* Hero Styles */
 
 .hero {
-    height: calc(100vh - 200px);
+    /* height: 100vh; */
     width: 100%;
+
 }
 
 .hero .con {
-    margin: 130px 100px 0;
+    margin: 200px 100px;
+    /* position: absolute; */
 }
 
 .hero .con .left .heading {
@@ -19,7 +21,7 @@
 }
 
 .hero .con .left .para {
-    font-size: 1.25rem;
+    font-size:  1.25rem;
     max-width: 540px;
     padding: 10px 0;
     line-height: 1.875rem;
@@ -36,8 +38,10 @@
 
 .hero img {
     position: absolute;
-    right: 0;
-    bottom: -100px;
+    /* right: 0; */
+    left: 0;
+    width: 100vw;
+    bottom: -50px;
     z-index: -1;
 }
 
@@ -54,7 +58,7 @@
     }
 
     .hero .con .left .para {
-        font-size: 1rem;
+        font-size: 1.125rem;
     }
     .hero .con .left .join {
         font-size: 1rem;
@@ -62,7 +66,7 @@
 
     .hero img {
         bottom: -10px;
-        width: 600px;
+        width: 768px;
     }
 }
 
@@ -70,14 +74,11 @@
 /* Vision Styles */
 
 .visions {
-
     width: 100%;
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     padding: 130px 100px;
     text-align: left;
 }
@@ -106,7 +107,32 @@
     letter-spacing: 2px;
 }
 
+@media screen and (max-width: 768px) {
+    .visions {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 80px 40px;
+    }
+    .visions .visionItem {
+        font-size: 1.125rem;
+    }
 
+    .visions .visionItem:nth-child(1){
+        padding-right: 0px;
+    }
+    .visions .visionItem:nth-child(2) {
+        padding: 50px 0px;
+        border-left: none;
+        border-right: none;    
+        border-top: 1px solid var(--b1);
+        border-bottom: 1px solid var(--b1);   
+    }
+    .visions .visionItem:nth-child(3) {
+        padding-left:  0px;
+    }
+}
 
 
 
@@ -176,9 +202,9 @@
     
 }
 .about .con .left .meet span{
-    padding-left: 0.5rem;
-    font-size: 1.2rem;
-    color: var(--c3);
+    padding-right: 0.5rem;
+    /* font-size: 1.2rem;
+    color: var(--c3); */
 }
 
 /* What We Do Styles */
@@ -200,14 +226,14 @@
     justify-content: center;
 }
 
-.work .con .left .heading {
+.work .con .container .heading2 {
     font-size: 2.5rem;
     font-weight:600;  
-    color: var(--c3);
+    /* color: var(--c3); */
     padding-top: 10px;
 }
 
-.work .con .left .para {
+.work .con .container .para2 {
     font-size: 1.25rem;
     max-width: 540px;
     padding: 0px 0;
@@ -246,7 +272,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .work .con .right .container .a{
