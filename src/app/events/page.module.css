@@ -1,49 +1,83 @@
 .cardCon {
-    /* border: 1px solid #e0e0e0; */
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  gap: 20px;
 }
+
 .eventListContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-  }
-  
-  .eventCards {
-    display: grid; /* Use grid for better layout */
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between cards */
-    width: 100%; /* Full width for cards */
-  }
-  
-  .headerCon {
-    margin-bottom: 20px; /* Space below header */
-  }
-  
-  .cardCon {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eventCardsContainer {
+  display: flex; /* Use flexbox for even spacing */
+  justify-content: space-evenly; /* Evenly space items */
+  flex-wrap: wrap; /* Allow wrapping for responsive layout */
+  gap: 20px; /* Space between cards */
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 1200px; /* Limit maximum width */
+}
+
+.headerCon {
+  margin-bottom: 20px;
+  text-align: center; /* Center header content */
+  width: 100%;
+}
+
+.loadMoreButtonContainer {
+  margin-top: 20px;
+
+}
+
+.loadMoreButtonContainer button {
+  position: relative;
+  background: transparent; /* Transparent button background */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Button padding */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  border: 3px solid #fff; /* Remove default border */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for clickable button */
+  z-index: 1; /* Ensure the button content is above the border */
+  transition: all 0.3s ease; /* Smooth hover transition */
+
+}
+
+/* .loadMoreButtonContainer button:hover {
+  background-color: var(--c3);
+  cursor: pointer;
+} */
+
+
+
+@media (max-width: 768px) {
   .eventCardsContainer {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-    gap: 10px; /* Space between cards */
-    width: 80%; /* Set width for the container */
+      justify-content: center; /* Center align cards on smaller screens */
+      gap: 15px;
   }
-  
-  .loadMoreButtonContainer {
-    margin-top: 20px; /* Space above the button */
+
+  .headerCon {
+      margin-bottom: 15px;
+      font-size: 18px; /* Smaller font size for mobile */
   }
-  
+
   .loadMoreButtonContainer .ant-btn {
-    background-color: #1890ff; /* Ant Design primary color */
-    color: white; /* Text color */
+      width: 100%; /* Full-width button on smaller screens */
+      max-width: 300px; /* Limit max width */
   }
-  
-  
+}
+
+@media (max-width: 480px) {
+  .eventCardsContainer {
+      justify-content: center; /* Ensure proper centering for small screens */
+      gap: 10px;
+  }
+
+  .cardCon {
+      padding: 10px;
+  }
+}

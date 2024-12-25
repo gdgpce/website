@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import EventCard from "@/components/eventcard/EventCard";
-import { Button } from "antd";
+
 
 
 const setDate = (date) => {
@@ -83,9 +83,9 @@ const EventsPage = () => {
         <EventList events={events} loading={loading} error={error} />
         {nextPage && (
           <div className={styles.loadMoreButtonContainer}>
-            <Button onClick={handleLoadMore} disabled={loading}>
-              {loading ? "Loading..." : "Load More"}
-            </Button>
+            <button onClick={handleLoadMore} disabled={loading}>
+              {loading ? "Loading..." : "Show More"}
+            </button>
           </div>
         )}
       </div>
