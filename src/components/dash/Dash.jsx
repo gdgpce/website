@@ -21,19 +21,19 @@ const CenteredDash = () => {
     );
   };
   
-  const SideDash = () => {
+  const SideDash = (props) => {
     return (
         <div className={styles.dash}>
-            <div className={styles.a}></div>
-            <div className={styles.b}></div>
+            <div className={styles.a} style={{ backgroundColor: props.color }}></div>
+            <div className={styles.b} style={{ backgroundColor: props.color }}></div>
         </div>
     );
   };
 
-  const LongDash = () => {
+  const LongDash = (props) => {
     return (
         <div className={styles.dash}>
-            <div className={styles.c}></div>
+            <div className={styles.c} style={{ backgroundColor: props.color }}></div>
         </div>
     );
   };
