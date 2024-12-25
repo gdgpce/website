@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import EventCard from "@/components/eventcard/EventCard";
+import {Skeleton} from 'antd'; 
 
 
 
@@ -16,7 +17,22 @@ const setDate = (date) => {
 const EventList = ({ events, loading, error }) => {
   return (
     <>
-      {loading && <p>Loading...</p>}
+      {loading && (
+        <div>
+          <Skeleton.Node
+          active={true}
+          style={{
+            width: 200,
+            height: 150,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }}
+          
+        />
+        <Skeleton style={{
+            width: 200,
+          }} />
+        </div>
+      )}
       {error && <p>Error: {error.message}</p>}
       <div className={styles.eventCardsContainer}>
         {events.map((event) => (
@@ -89,6 +105,20 @@ const EventsPage = () => {
           </div>
         )}
       </div>
+      {/* <div>
+          <Skeleton.Node
+          active={true}
+          style={{
+            width: 200,
+            height: 150,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }}
+        />
+        <Skeleton style={{
+            width: 200,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }} />
+        </div> */}
     </div>
   );
 };

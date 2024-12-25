@@ -54,13 +54,13 @@
 }
 
 .date {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   /* margin: 5px; */
   color: #5BDAED;
 }
 
 .content .eventType {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 15px;
 }
 
@@ -68,3 +68,24 @@
   font-size: 1.3rem;
   /* line-height: 1.5; */
 }
+
+@media (max-width: 768px) {
+  .date {
+    font-size: 1.25rem;
+    /* margin: 5px; */
+    color: #5BDAED;
+  }
+  
+  .content .eventType {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  .content p {
+    font-size: 1.125rem;
+    /* line-height: 1.5; */
+  }
+}
+
+
+
