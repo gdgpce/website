@@ -15,10 +15,13 @@
     "nextjs-toploader": "^3.7.15",
     "react": "^18",
     "react-countup": "^6.5.3",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "eslint": "^8",
-    "eslint-config-next": "14.2.21"
+    "eslint-config-next": "14.2.21",
+    "web-vitals": "^4.2.4"
   }
 }
