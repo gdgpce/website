@@ -1,4 +1,5 @@
 "use client";
+import Hexagon from 'react-hexagon'
 import styles from "./page.module.css";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb"
 import TeamCard from "@/components/teamcard/TeamCard"

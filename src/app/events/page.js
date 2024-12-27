@@ -17,8 +17,18 @@ const EventList = ({ events, loading, error }) => {
     <>
       {loading && (
         <div>
-          <Skeleton active={true} style={{ width: 200, height: 150 }} />
-          <Skeleton style={{ width: 200 }} />
+          <Skeleton.Node
+          active={true}
+          style={{
+            width: 200,
+            height: 150,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }}
+          
+        />
+        <Skeleton style={{
+            width: 200,
+          }} />
         </div>
       )}
       {error && <p>Error: {error.message}</p>}
@@ -163,6 +173,20 @@ const EventsPage = () => {
   </iframe>
 </div>
 
+      {/* <div>
+          <Skeleton.Node
+          active={true}
+          style={{
+            width: 200,
+            height: 150,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }}
+        />
+        <Skeleton style={{
+            width: 200,
+            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+          }} />
+        </div> */}
     </div>
   );
 };

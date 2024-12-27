@@ -112,10 +112,8 @@
   }
   
   .eventCardsContainer {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* Three cards per row */
-    gap: 10px; /* Space between cards */
-    width: 80%; /* Set width for the container */
+      justify-content: center; /* Center align cards on smaller screens */
+      gap: 15px;
   }
 
 .loadMoreButtonContainer button {

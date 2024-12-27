@@ -4,17 +4,17 @@ import { LongDash, SideDash } from "@/components/dash/Dash";
 import { DoubleRightOutlined } from "@ant-design/icons";
 import styles from "./page.module.css";
 
-export default function About() {
+export default function OurTeam() {
   return (
     <div className={styles.about}>
       <div className={styles.secContainer + " " + styles.left}>
         <div className={styles.contentCon}>
           <div>
-            <LongDash color="var(--g1)" />
+            <LongDash color="var(--g3)" />
             <div className={styles.secHeading}>
-              About <span>GDG-PCE</span>
+               <span>Our</span> Team
             </div>
-            <SideDash color="var(--g1)" />
+            <SideDash color="var(--g3)" />
             <div className={styles.secDescription}>
               Google Developer Groups at PCE organize and facilitate workshops,
               hackathons, speaker sessions, and study jams to provide students
@@ -23,7 +23,7 @@ export default function About() {
               your technical skills through a peer-to-peer learning environment.
             </div>
             <Link href="/team" className={styles.secRedirect}>
-                <span>MEET THE TEAM </span> <DoubleRightOutlined style={{ color: "var(--g1)" }} className={styles.arrow} />
+                <span>MEET THE TEAM </span> <DoubleRightOutlined style={{ color: "var(--g3)" }} className={styles.arrow} />
             </Link>
           </div>
         </div>

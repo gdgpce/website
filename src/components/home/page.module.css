@@ -28,12 +28,12 @@
 }
 
 .hero .con .left .join {
-    width: fit-content;
     font-size: 1.25rem;
     padding: 10px 20px;
     margin: 20px 0;
     border-radius: 40px;
     border: 1.5px solid #e6dfcf;
+    width: fit-content;
 }
 
 .hero img {
@@ -60,6 +60,7 @@
 
     .hero .con .left .para {
         font-size: 1.125rem;
+        line-height: 1.6rem;
     }
     .hero .con .left .join {
         font-size: 1rem;
@@ -80,7 +81,6 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 130px 100px;
     text-align: left;
@@ -114,12 +114,13 @@
     .visions {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
+        margin-top: 60px;
         padding: 80px 40px;
     }
     .visions .visionItem {
         font-size: 1.125rem;
+        line-height: 1.6rem;
     }
 
     .visions .visionItem:nth-child(1){
@@ -139,161 +140,116 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* About Styles */
-
-.about {
-    min-height: 100vh;
+.secContainer {
     width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    padding: 0 100px;
 }
 
-.about .con {
-    margin: 10px 100px 0;
-}
-.about .con .left {
-
+.left{
+    flex-direction: row;
 }
 
-.about .con .right {
-
+.right{
+    flex-direction: row-reverse;
 }
 
-.about .con .left .heading {
+.contentCon {
+    min-width: 50%;
+    height: 100dvh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+}
+
+.imageCon {
+    min-width: 50%;
+    min-height: 100dvh;
+    /* background-color: greenyellow;    */
+}
+
+.secHeading {
     font-size: 2.5rem;
     font-weight:700;  
 }
 
-.about .con .left .heading span {
+.secHeading span {
     font-weight:400;  
 }
 
-.about .con .left .para {
+.secDescription {
     font-size: 1.25rem;
     max-width: 540px;
-    padding: 10px 0;
+    padding: 10px 0 30px;
     line-height: 1.875rem;
-    color: var(--b3);
 }
 
-.about .con .left .meet {
-    margin-top: 2.5rem;
+.secRedirect {
+    /* margin-top: 2.5rem; */
     font-size: 1rem;
-    font-weight:700;  
+    font-weight:700;
+    text-decoration: none;
+    color: var(--secondary);  
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: fit-content;
+    transition: all 0.3s;
 }
-.about .con .left .meet:hover {
-    
-}
-.about .con .left .meet span{
+
+.secRedirect span{
     padding-right: 0.5rem;
-    /* font-size: 1.2rem;
-    color: var(--c3); */
 }
 
-/* What We Do Styles */
-
-.work {
-    min-height: 100vh;
-    width: 100%;
+.secRedirect .arrow {
+    transition: transform 0.3s linear;
 }
 
-.work .con {
-    margin: 10px 100px 0;
+.secRedirect:hover .arrow {
+    transform: translateX(5px); 
+}
+
+
+
+
+/* work styles */
+.statContainer {
     display: flex;
-}
-.work .con .left {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
     justify-content: center;
+    /* padding: 1px 0; */
 }
 
-.work .con .container .heading2 {
+.statTitle {
     font-size: 2.5rem;
-    font-weight:600;  
-    /* color: var(--c3); */
+    font-weight:600;
     padding-top: 10px;
 }
 
-.work .con .container .para2 {
+.text {
     font-size: 1.25rem;
     max-width: 540px;
-    padding: 0px 0;
     line-height: 1.875rem;
-    color: var(--b3);
 }
 
-.work .con .right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: start; */
-    align-items: flex-start;
-
-}
-
-.work .con .right .heading {
-    font-size: 2.5rem;
-    font-weight:700;  
-}
-
-.work .con .right .heading span {
-    font-weight:400;  
-}
-
-.work .con .right .para {
-    font-size: 1.25rem;
-    max-width: 540px;
-    padding: 10px 0;
-    line-height: 1.875rem;
-    color: var(--b3);
-}
-
-
-.work .con .right .container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-.work .con .right .container .a{
+.a {
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.work .con .right .container .b{
+
+.b {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-.work .con .right .container .b .button{
+.b .button {
     margin-top: 2.5rem;
+    height: fit-content;
     font-size: 1rem;
     font-weight:700;  
     cursor: pointer;
@@ -303,8 +259,38 @@
     padding: 10px 20px;
 }
 
-.work .con .right .container .b .button span{
-    padding-left: 0.5rem;
+.b .button span {
+    /* padding-left: 0.5rem; */
     font-size: 1.2rem;
-    color: var(--c3);
+}
+
+@media screen and (max-width: 768px) {
+    .secContainer {
+        padding: 80px 40px;
+    }
+    .left{
+        flex-direction: column;
+    }
+    .right{
+        flex-direction: column;
+    }
+    .contentCon {
+        height: fit-content;
+        padding: 10px 0;
+    }
+    .secHeading {
+        /* width: 200px; */
+        font-size: 2rem;
+    }
+    .secDescription {
+        font-size: 1.125rem;
+        line-height: 1.6rem;
+    }
+
+    .statContainer {
+        flex-direction: column;
+    }
+    .a {
+        width: 100%;
+    }
 }
