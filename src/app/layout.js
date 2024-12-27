@@ -3,6 +3,7 @@ import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/header/Header";
 // import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
+import LoadingOverlay from "@/components/loading/LoadingOverlay";
 
 const googleSans = localFont({
     src: [
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className={googleSans.className}>
                 <NextTopLoader />
+                <LoadingOverlay />
                 <Header />
                 {children}
             </body>
