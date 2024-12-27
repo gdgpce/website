@@ -1,198 +1,204 @@
-{"Technical": [
+{
+    "Mentors": [
       {
-        "Name": "Grahish",
-        "Position": "Android Domain Lead",
-        "ImagePath": ""
+          "Name": "Bedant Hota",
+          "Position": "Mentor",
+          "ImagePath": ""
       },
       {
-        "Name": "Krishna Agrawal",
-        "Position": "Open Source Domain Lead",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Saket Singh",
-        "Position": "DSA Domain Lead",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Dnynesh M",
-        "Position": "Technical Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Aryan V Khokale",
-        "Position": "Technical Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Avani Srivastav",
-        "Position": "Technical Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Basawaraj V",
-        "Position": "Technical Member",
-       "ImagePath": ""
-      },
-      {
-        "Name": "Shridhar Ganesh Khare",
-        "Position": "Technical Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Suyash Thanage",
-        "Position": "Web Dev Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Suyash Ware",
-        "Position": "Web Dev Member",
-        "ImagePath": ""
+          "Name": "Siddhi Thoke",
+          "Position": "Mentor",
+          "ImagePath": ""
       }
-      
- 
+  ],
+    "Technical": [
+        {
+            "Name": "Grahish",
+            "Position": "Android Domain Lead",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Krishna Agrawal",
+            "Position": "Open Source Domain Lead",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Saket Singh",
+            "Position": "DSA Domain Lead",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Dnynesh M",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Aryan V Khokale",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Avani Srivastav",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Basawaraj V",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Shridhar Ganesh Khare",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Suyash Thanage",
+            "Position": "Web Dev Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Suyash Ware",
+            "Position": "Web Dev Member",
+            "ImagePath": ""
+        }
     ],
     "Management": [
-      {
-        "Name": "Hemant Waghmare",
-        "Position": "Management Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Sanjana Menon",
-        "Position": "Management Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Tanishka Jagnivas",
-        "Position": "Management Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Rudra Mayuresh Joshi",
-        "Position": "Management Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Arnav Deka",
-        "Position": "Management Member",
-       "ImagePath": ""
-      }
+        {
+            "Name": "Hemant Waghmare",
+            "Position": "Management Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Sanjana Menon",
+            "Position": "Management Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Tanishka Jagnivas",
+            "Position": "Management Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Rudra Mayuresh Joshi",
+            "Position": "Management Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Arnav Deka",
+            "Position": "Management Member",
+            "ImagePath": ""
+        }
+    ],
+
+    "Publicity": [
+        {
+            "Name": "Shabarinath Raghunath",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Tanvi Santosh Harde",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "CNS Manaswini",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Yashika Singh",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Thombre Shalmali Atul",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Manish Santosh Dhole",
+            "Position": "Publicity Member",
+            "ImagePath": ""
+        }
     ],
     "Graphics": [
-      {
-        "Name": "Ayush Duduskar",
-        "Position": "Graphics Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Swaraj More",
-        "Position": "Graphics Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Parth Ramesh Bamane",
-        "Position": "Graphics Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Purva Devidas Badekar",
-        "Position": "Graphics Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Rutwa Mokal",
-        "Position": "Graphics Member",
-        "ImagePath": ""
-      }
+        {
+            "Name": "Purva Devidas Badekar",
+            "Position": "Graphics Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Swaraj More",
+            "Position": "Graphics Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Parth Ramesh Bamane",
+            "Position": "Graphics Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Rutwa Mokal",
+            "Position": "Graphics Member",
+            "ImagePath": ""
+        }
     ],
     "Content": [
-      {
-        "Name": "Navin Choudhary",
-        "Position": "Content Member",
-       "ImagePath": ""
-      },
-      {
-        "Name": "Nandan Pradip Tandel",
-        "Position": "Content Member",
-       "ImagePath": ""
-      }
+        {
+            "Name": "Navin Choudhary",
+            "Position": "Content Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Nandan Pradip Tandel",
+            "Position": "Content Member",
+            "ImagePath": ""
+        }
     ],
     "Coverage": [
-      {
-        "Name": "Vijay Vishwanathan",
-        "Position": "Coverage Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Anjali Raikar",
-        "Position": "Coverage Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Jidnyasa Kalaskar",
-        "Position": "Coverage Member",
-       "ImagePath": ""
-      },
-      {
-        "Name": "Jayesh Sonar",
-        "Position": "Coverage Member",
-        "ImagePath": ""
-      }
+        {
+            "Name": "Vijay Vishwanathan",
+            "Position": "Coverage Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Anjali Raikar",
+            "Position": "Coverage Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Jidnyasa Kalaskar",
+            "Position": "Coverage Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Jayesh Sonar",
+            "Position": "Coverage Member",
+            "ImagePath": ""
+        }
     ],
     "Marketing": [
-      {
-        "Name": "Ameya Kavishwar",
-        "Position": "Marketing Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Abhijay Anilan Puthan Veedu",
-        "Position": "Marketing Member",
-       "ImagePath": ""
-      },
-      {
-        "Name": "Sejal Bhanushali",
-        "Position": "Marketing Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Krishna Madinkumar",
-        "Position": "Marketing Member",
-        "ImagePath": ""
-      }
-    ],
-    "Publicity": [
-      {
-        "Name": "Shabarinath Raghunath",
-        "Position": "Publicity Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Tanvi Santosh Harde",
-        "Position": "Publicity Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "CNS Manaswini",
-        "Position": "Publicity Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Yashika Singh",
-        "Position": "Publicity Member",
-       "ImagePath": ""
-      },
-      {
-        "Name": "Thombre Shalmali Atul",
-        "Position": "Publicity Member",
-        "ImagePath": ""
-      },
-      {
-        "Name": "Manish Santosh Dhole",
-        "Position": "Publicity Member",
-        "ImagePath": ""
-      }
+        {
+            "Name": "Ameya Kavishwar",
+            "Position": "Marketing Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Abhijay Anilan Puthan Veedu",
+            "Position": "Marketing Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Sejal Bhanushali",
+            "Position": "Marketing Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Krishna Madinkumar",
+            "Position": "Marketing Member",
+            "ImagePath": ""
+        }
     ]
-  }
-  
+}
