@@ -21,9 +21,6 @@
     font-size: 1.125rem;
 }
 
-
-
-
 .group {
     width: 100%;
     display: flex;
@@ -36,7 +33,7 @@
 }
 
 .faculty{
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
