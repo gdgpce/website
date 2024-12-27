@@ -2,26 +2,26 @@
     {
         "Name": "Dr. Sharvari Govilkar Govilkar",
         "Position": "HOD of Computer Engineering Department",
-        "ImagePath": "2024-25/Sharvari"
+        "ImagePath": "/team/sharvariMaam.webp"
       },
       {
-        "Name": "Dr. Prashant P. Nitnaware",
+        "Name": "Dr. Satishkumar L. Varma",
         "Position": "HOD of IT Engineering Dept.",
-        "ImagePath": "2024-25/Prashant"
+        "ImagePath": ""
       },
       {
         "Name": "Dr. Monika Bhagwat",
         "Position": "HOD of ECS Engineering Dept.",
-        "ImagePath": "2024-25/Monika"
+        "ImagePath": "/team/monikaMaam.webp"
       },
       {
         "Name": "Krishnendu S. Nair",
         "Position": "Facuty Coordinator",
-        "ImagePath": "2024-25/Krishnendu"
+        "ImagePath": ""
       },
       {
         "Name": "Shubhangi Rathod",
         "Position": "Facuty Coordinator",
-        "ImagePath": "2024-25/Shubhangi"
+        "ImagePath": ""
       }
 ]
