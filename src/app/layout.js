@@ -3,6 +3,7 @@ import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/header/Header";
 // import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
+import Footer from "@/components/footer/Footer";
 
 const googleSans = localFont({
     src: [
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
                 <NextTopLoader />
                 <Header />
                 {children}
+                <Footer/>
             </body>
         </html>
     );
