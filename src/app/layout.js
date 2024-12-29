@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./tailwind.css";
 import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/header/Header";
 // import { Open_Sans } from 'next/font/google';
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
             </head>
             <body className={googleSans.className}>
-                <NextTopLoader />
+                <NextTopLoader style={{ zIndex: 500 }} />
                 <LoadingOverlay />
                 <Header />
                 {children}

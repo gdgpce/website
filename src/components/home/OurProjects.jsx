@@ -27,7 +27,9 @@ export default function OurProjects() {
             </Link>
           </div>
         </div>
-        <div className={styles.imageCon}></div>
+        <div className={styles.imageCon}>
+          <img src="/assets/projects.png" alt="projects" />
+        </div>
       </div>
     </div>
   );

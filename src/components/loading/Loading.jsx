@@ -5,12 +5,12 @@ import "./loading.css";
 const styles = {
     loading:{
         position: "fixed",
-        top: "5px",
+        top: 0,
         left: 0,
         right: 0,
         bottom: 0,
         backgroundColor: "var(--primary)",
-        zIndex: 9999,
+        zIndex: 200,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

@@ -27,7 +27,9 @@ export default function About() {
             </Link>
           </div>
         </div>
-        <div className={styles.imageCon}></div>
+        <div className={styles.imageCon} style={{paddingBottom: "150px"}}>
+          <iframe src="/about-iframe/index.html" frameborder="0" width="100%" height={350} style={{overflow: "hidden"}}></iframe>
+        </div>
       </div>
     </div>
   );

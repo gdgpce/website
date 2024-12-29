@@ -27,7 +27,9 @@ export default function OurTeam() {
             </Link>
           </div>
         </div>
-        <div className={styles.imageCon}></div>
+        <div className={styles.imageCon}>
+          <img src="/assets/team.png" alt="team" />
+        </div>
       </div>
     </div>
   );

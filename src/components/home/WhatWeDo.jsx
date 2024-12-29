@@ -45,7 +45,9 @@ export default function WhatWeDo() {
             </div>
           </div>
         </div>
-        <div className={styles.imageCon}></div>
+        <div className={styles.imageCon}>
+          <img src="/assets/whatwedo.png" alt="whatwedo" />
+        </div>
       </div>
     </div>
   );
