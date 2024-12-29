@@ -1,0 +1,95 @@
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100">
+    <line x1="10" y1="52" x2="190" y2="52" stroke="blue" stroke-width="8" />
+    <line x1="10" y1="50" x2="190" y2="50" stroke="green" stroke-width="4" />
+</svg> -->
+
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<svg version="1.1" id="GDSC" class="loaded" data-name="GDSC" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950.62 464.86" >
+    <style>
+
+		svg#GDSC {
+		visibility: hidden;
+		}
+
+		svg#GDSC.loaded {
+		visibility: visible;
+		}
+
+		svg#GDSC.loaded line {
+		fill: none;
+		stroke-linecap: round;
+		stroke-width: 140px;
+		}
+
+		@keyframes line_forward {
+		100% {
+			stroke-dashoffset: 0;
+		}
+		}
+
+		@keyframes line_reverse {
+		100% {
+			stroke-dashoffset: 640;
+		}
+		}
+
+		svg#GDSC.loaded line:nth-child(1) {
+		stroke: #ffb808;
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_forward 0.4s ease forwards 0.6s;
+		}
+
+<!-- outline of green -->
+		svg#GDSC.loaded line:nth-child(2) {
+		stroke: #0E0023;
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_reverse 0.4s ease forwards 0s;
+		}
+
+		svg#GDSC.loaded line:nth-child(3) {
+		stroke: #f74037;
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_forward 0.4s ease forwards 0.6s;
+		}
+
+<!-- outline of blue -->
+		svg#GDSC.loaded line:nth-child(4) {
+		stroke: #0E0023;  
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_reverse 0.4s ease forwards 0s;
+		}
+
+<!-- line of green -->
+		svg#GDSC.loaded line:nth-child(6) {
+		stroke: #14b25f; 
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_reverse 0.4s ease forwards 0s;
+		}
+
+<!-- line of blue -->
+		svg#GDSC.loaded line:nth-child(8) {
+		stroke: #4a90f4;
+		stroke-dasharray: 320;
+		stroke-dashoffset: 320;
+		animation: line_reverse 0.4s ease forwards 0s;
+		}
+
+	</style>
+    
+    <g id="Logo">
+        <line x1="875.62" y1="232.57" x2="598" y2="389.86" />
+        <line x1="875.62" y1="262.57" x2="607.08" y2="105" />
+        <line x1="75" y1="232.57" x2="343.54" y2="75" />
+        <line x1="75" y1="202.57" x2="352.62" y2="359.86" />
+
+		<line x1="875.62" y1="232.57" x2="598" y2="389.86" />
+        <line x1="875.62" y1="232.57" x2="607.08" y2="75" />
+        <line x1="75" y1="232.57" x2="343.54" y2="75" />
+        <line x1="75" y1="232.57" x2="352.62" y2="389.86" />
+    </g>
+</svg>

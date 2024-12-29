@@ -1,99 +1,22 @@
-/* General styles for the component */
-.TeamCard {
+.card{
+    /* border: white 1px  solid; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-content: center;
+    margin: 20px 0;
     
-
-
-    /* border: 1px solid gray;*/
-    border-radius: 10px;
-
-    padding: 30px 0;
-    margin: 0;
-
-    width: 300px;
-    height:400px;
-    transition: transform 0.3s;
+}
+.info{
+    width: 250px;
+    text-align: center;
+    padding: 22px 0;
+}
+.info .heading{
+    font-size: 1.125rem;
+    font-weight: 800;
 }
 
-.TeamCard:hover {
-    transform: scale(1.05);
+.info .postion{
+    font-size: 0.9rem;
+    font-weight: 400;
 }
-
-.profileImage {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/cb/Elon_Musk_Royal_Society_crop.jpg ');
-    background-size: cover;
-    background-position: center;
-
-    width: 200px;
-    height: 250px;
-    margin: 0 auto;
-    border: 2px auto;
-
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    overflow: hidden;
-    object-fit: cover;
-    z-index: 2;
-}
-
-.info {
-    margin-top: 1.5rem;
-}
-
-.info p{
-    margin: 10px auto;
-}
-
-.hexagon{
-    background-image: radial-gradient(circle at top, purple, transparent 70%), radial-gradient(circle at bottom, #800080, transparent 70%);
-    background-size: cover;
-    background-position: center;
-
-    width: 200px;
-    height: 250px;
-    margin: 0 auto;
-    border: 2px auto;
-
-    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    overflow: hidden;
-    object-fit: cover;
-    z-index: 1; /* Higher z-index makes this appear above box1 if present */
-}
-
-.container {
-    position: relative; /* Sets a reference point for child elements */
-    width: 300px;
-    height: 300px;
-
-    display: flex;
-    justify-content: center; /* Centers the hexagon horizontally */
-    align-items: center; /* Centers the hexagon vertically */
-}
-
-
-
-
-
-
-/* Responsive design */
-@media (min-width: 600px) {
-    .TeamCard {
-        max-width: 400px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .TeamCard {
-        width: 100%;
-    }
-}
-
-
-
-
-

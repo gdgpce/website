@@ -12,7 +12,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img src="/animated-logo.svg" alt="logo" />
+                <img src="/animated-logo-stroke.svg" alt="logo" />
                 <div>
                     {/* <h3>GDG - <span>PCE</span></h3> */}
                     {/* <p><span style={{color: "var(--g4)", fontWeight: 600}}>On Campus</span> • Pillai College of Engineering</p> */}

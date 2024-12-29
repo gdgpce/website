@@ -4,6 +4,7 @@ import Header from "@/components/header/Header";
 // import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 import Footer from "@/components/footer/Footer";
+import LoadingOverlay from "@/components/loading/LoadingOverlay";
 
 const googleSans = localFont({
     src: [
@@ -11,12 +12,6 @@ const googleSans = localFont({
 
     ],
   });
-
-// const openSans  = Open_Sans({
-//     subsets: ['latin'], // Optional subsets
-//     weight: ['300', '400', '500', '600', '700'], // Optional weights
-//     variable: '--font-inter', // Optional CSS variable
-//   });
 
 export const metadata = {
     title: "GDG PCE",
@@ -26,8 +21,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0" />
+            </head>
             <body className={googleSans.className}>
                 <NextTopLoader />
+                <LoadingOverlay />
                 <Header />
                 {children}
                 <Footer/>

@@ -1,23 +1,19 @@
 "use client";
-import React from 'react';
-import styles from './TeamCard.module.css'; // Import using styles
+import React from "react";
+import styles from "./TeamCard.module.css"; // Import using styles
+import Hexcard from "@/components/hexcard/Hexcard";
 
-const TeamCard = ({ name, role, imageUrl, colorClass }) => {
-    // Determine the color class dynamically.  This handles cases where colorClass isn't provided.
-    const finalColorClass = styles[colorClass] || styles.default; //default class if colorClass is missing or invalid
+const TeamCard = ({ name, position, imgURL, color }) => {
 
-    return (
-        <div className={`${styles.TeamCard} ${finalColorClass}`}> {/* Apply styles.teamCard and the  dynamic color class */}
-            <div className={styles.container}>
-                
-                <div className={styles.profileImage}></div>
-            </div>
-                <div className={styles.info}>
-                    <h2>{name}</h2>
-                    <p>{role}</p>
-                </div>
-        </div>  
-    );
+  return (
+    <div className={styles.card}>
+      <Hexcard color={color} src={imgURL} />
+      <div className={styles.info}>
+        <div className={styles.heading}>{name}</div>
+        <div className={styles.position}>{position}</div>
+      </div>
+    </div>
+  );
 };
 
 export default TeamCard;
