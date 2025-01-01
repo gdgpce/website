@@ -1,8 +1,6 @@
 import "./globals.css";
-import "./tailwind.css";
 import NextTopLoader from "nextjs-toploader";
 import Header from "@/components/header/Header";
-// import { Open_Sans } from 'next/font/google';
 import localFont from 'next/font/local';
 import Footer from "@/components/footer/Footer";
 import LoadingOverlay from "@/components/loading/LoadingOverlay";
@@ -10,7 +8,6 @@ import LoadingOverlay from "@/components/loading/LoadingOverlay";
 const googleSans = localFont({
     src: [
       { path: './fonts/GoogleSans-Regular.ttf', weight: '400', style: 'normal' },
-
     ],
   });
 
