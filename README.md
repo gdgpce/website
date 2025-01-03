@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GDG-PCE Official Website 🚀✨  
+Welcome to the official repository of the **Google Developer Group - Pillai College of Engineering** (GDG-PCE) 🌐. This repository hosts the code for our dynamic, community-focused website.  
 
-## Getting Started
+<br>
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+![Screenshot 2025-01-03 183111](https://github.com/user-attachments/assets/27ad3137-2d70-46f5-ad4b-fd037eebd13b)
+
+
+
+
+
+
+
+## 📂 Folder Structure  
 ```
+/
+├── public/               # Public assets directory
+├── src/                  # Source files for the project
+│   ├── app/              # App Router directory (routes, layouts, styles, etc.)
+│   ├── components/       # Reusable UI components
+│   ├── data/             # Static or dynamic data files
+│   └── lib/              # Utility functions or custom hooks
+├── package.json          # Dependencies and scripts
+├── next.config.js        # Next.js configuration
+├── postcss.config.js     # PostCSS configuration
+├── tailwind.config.js    # Tailwind CSS configuration
+└── README.md             # Project documentation
+```
+## 🚀 Getting Started  
+Follow these steps to set up the project locally:  
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Clone the repository**  
+   ```bash  
+   git clone https://github.com/gdgpce/website.git
+   cd website  
+   ```  
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+2. **Install dependencies**  
+   ```bash  
+   npm install  
+   ```  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Start the development server**  
+   ```bash  
+   npm run dev  
+   ```  
+   Visit `http://localhost:3000` in your browser to view the website.  
 
-## Learn More
+## 🤝 Contributors 
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a href="https://github.com/gdgpce/website/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=gdgpce/website" />
+</a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🛠 Technologies Used  
+- NextJS 
+- React
+- Three.Js
+- Ant Design
+- NextUI
+- Figma
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  
+## 📄 License  
+This project is licensed under the [MIT License](LICENSE).  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🌐 Connect with Us  
+- 🌍 [GDG-PCE Website](https://gdg.pce.ac.in)  
+- 📸 [Instagram](https://instagram.com/gdgpce)  
+- 🔗 [linkedin](https://www.linkedin.com/company/gdgpce)
+---
+
+#### Let's connect, learn, and grow together! 🌱
