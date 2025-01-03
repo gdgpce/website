@@ -1,55 +1,77 @@
 :root {
-  /* --primary: #10151D; */
-  --primary: #0E0023;
-  --secondary: #efefef;
-  --accent: #b895fd;
+    /* --primary: #10151D; */
+    --primary: #0e0023;
+    --secondary: #efefef;
+    --accent: #b895fd;
 
-  --b1: #E6DFCF;
-  --c1: #ff6849;
-  --c2: #ffaf00;
-  --c3: #fa851a;
-  --c4: #0a91ff;
+    --b1: #e6dfcf;
+    --c1: #ff6849;
+    --c2: #ffaf00;
+    --c3: #fa851a;
+    --c4: #0a91ff;
 
-  --g1: #ffb808;
-  --g2: #14b25f;
-  --g3: #f74037;
-  --g4: #4a90f4;
-  
+    --g1: #ffb808;
+    --g2: #14b25f;
+    --g3: #f74037;
+    --g4: #4a90f4;
 
-  --f1: 1rem;
-  --f2: 1.125rem;
-  --f3: 1.5rem;
-  --f4: 2rem;
-  --f5: 3rem;
-}
-
-
-html,
-body {
-  max-width: 100vw;
-  min-height: 100dvh;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--secondary);
-  background: var(--primary) ;
-  /* radial-gradient(500px 300px at 50% 0%,#131f33 20%,#131e3100), */
-  /* background-image: ; */
-  background-repeat: no-repeat;
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --f1: 1rem;
+    --f2: 1.125rem;
+    --f3: 1.5rem;
+    --f4: 2rem;
+    --f5: 3rem;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    max-width: 100vw;
+    min-height: 100dvh;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--secondary);
+    background: var(--primary);
+    /* radial-gradient(500px 300px at 50% 0%,#131f33 20%,#131e3100), */
+    /* background-image: ; */
+    /* background-repeat: no-repeat; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+/* body::-webkit-scrollbar{
+  display: none;
+} */
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #7453d5 #0e0023;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #0e0023;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #7453d5;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
 }
 
 #nprogress .spinner-icon {
-  display: none;
+    display: none;
 }
 
 input,
