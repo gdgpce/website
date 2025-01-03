@@ -25,7 +25,7 @@ export default function WhatWeDo() {
                 <div className={styles.statTitle}>1400+</div>
                 <div className={styles.text}>Students connected</div>
 
-                <div className={styles.statTitle}>5000+</div>
+                <div className={styles.statTitle}>15000+</div>
                 <div className={styles.text}>Lines of code written</div>
 
                 <div className={styles.statTitle}>10+</div>

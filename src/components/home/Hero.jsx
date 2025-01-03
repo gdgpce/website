@@ -1,5 +1,6 @@
 import styles from "./page.module.css";
 import dynamic from "next/dynamic";
+import { LongDash, SideDash } from "../dash/Dash";
 
 const World = dynamic(
     () => import("@/components/ui/globe").then((m) => m.World),
@@ -11,15 +12,15 @@ const World = dynamic(
 export default function Hero() {
     const globeConfig = {
         pointSize: 4,
-        globeColor: "#141571",
+        globeColor: "#062056",
         showAtmosphere: true,
         atmosphereColor: "#FFFFFF",
         atmosphereAltitude: 0.1,
         emissive: "#062056",
-        emissiveIntensity: 0.1,
+        emissiveIntensity: 0.75,
         shininess: 0.9,
         polygonColor: "rgba(255,255,255,1)",
-        ambientLight: "#38bdf8",
+        ambientLight: "#ffffff",
         directionalLeftLight: "#ffffff",
         directionalTopLight: "#ffffff",
         pointLight: "#ffffff",
@@ -398,17 +399,17 @@ export default function Hero() {
         <div className={styles.hero}>
             <div className={styles.con}>
                 <div className={styles.left}>
-                    <div className={styles.heading}>
-                        Google Developer Groups
-                    </div>
                     <div className={styles.subHeading}>
-                        On Campus • Pillai College of Engineering
+                        Hello Developers <span className={styles.waveEmoji}>👋</span>
                     </div>
+                    <div className={styles.heading}>
+                    Dive into the vibrant world of innovation, where ideas turn into reality.
+                    </div>
+                    <SideDash />
                     <div className={styles.para}>
-                        Dive into a vibrant community of creative minds and tech
-                        enthusiasts driving innovation across diverse fields.
+                        A student chapter of Google Developer Groups on Campus, Pillai College of Engineering.
                     </div>
-                    <div className={styles.join}>Join our community</div>
+                    <div className={styles.join} onClick={() => { window.open("https://gdg.community.dev/gdg-on-campus-pillai-college-of-engineering-navi-mumbai-india/", "_blank") }} >Join Our Chapter</div>
                 </div>
                 <div className={styles.right}>
                     <div>

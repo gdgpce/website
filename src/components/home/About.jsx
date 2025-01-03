@@ -22,13 +22,13 @@ export default function About() {
               workshops, webinars, hackathons, and other exciting events. Expand
               your technical skills through a peer-to-peer learning environment.
             </div>
-            <Link href="/team" className={styles.secRedirect}>
+            {/* <Link href="/team" className={styles.secRedirect}>
                 <span>MEET THE TEAM </span> <DoubleRightOutlined style={{ color: "var(--g1)" }} className={styles.arrow} />
-            </Link>
+            </Link> */}
           </div>
         </div>
-        <div className={styles.imageCon} style={{paddingBottom: "150px"}}>
-          <iframe src="/about-iframe/index.html" frameBorder="0" width="100%" height={350} style={{overflow: "hidden"}}></iframe>
+        <div className={styles.imageCon + " " + styles.aboutIframe} >
+          <iframe src="/about-iframe/index.html" frameBorder="0" width="100%" style={{overflow: "hidden"}}></iframe>
         </div>
       </div>
     </div>
