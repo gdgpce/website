@@ -4,7 +4,10 @@ Welcome to the official repository of the **Google Developer Group - Pillai Coll
 <br>
 
 
-![Screenshot 2025-01-03 161836](https://github.com/user-attachments/assets/1378837f-07ff-47af-9b0f-0fc1f71f5b05)
+![Screenshot 2025-01-03 183111](https://github.com/user-attachments/assets/27ad3137-2d70-46f5-ad4b-fd037eebd13b)
+
+
+
 
 
 
