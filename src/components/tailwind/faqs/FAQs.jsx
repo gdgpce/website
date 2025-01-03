@@ -10,7 +10,7 @@ export default function Page() {
 
   return (
     <NextUIProvider>
-      <div className="dark text-foreground bg-background" style={{ padding: "20px", maxWidth: "900px", margin: "50px auto", color: "white" }}>
+      <div className="dark text-foreground bg-background" style={{ padding: "20px", maxWidth: "900px", margin: "0px auto 100px", color: "white" }}>
         <Accordion>
           <AccordionItem key="1" aria-label="Accordion 1" title="Who Should Join GDG-PCE">
             {defaultContent}

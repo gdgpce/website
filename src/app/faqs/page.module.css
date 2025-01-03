@@ -1,0 +1,33 @@
+.page{
+    padding: 50px 0;
+}
+.headings {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mainhead {
+    font-weight: 700;
+    text-align:center ;
+    font-size: 2.2rem;
+}
+.subhead {
+    /* margin: 1rem; */
+    color: var(--c3);
+    /* margin-top: 3rem; */
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.group {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: first baseline;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 40px;
+}
