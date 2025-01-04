@@ -1,0 +1,195 @@
+/* General Styling */
+.contactPage {
+   padding: 0 100px 100px ;
+}
+  
+  /* Flexbox container */
+  .contactContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+  }
+  
+  /* Left Flexbox */
+  .leftContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .headings .mainhead {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: white; /* Light purple text */
+  }
+  
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contactForm label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white; 
+    margin-top: 10px;
+  }
+  
+  .contactForm input,
+  .contactForm textarea {
+    padding: 15px ;
+    border: none;
+    border-radius: 5px;
+    background-color: #351763; /* Medium purple background */
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    outline: none;
+    font-size: 1.15rem;
+    resize: none;
+  }
+  .contactForm input::placeholder,
+  .contactForm textarea::placeholder {
+    color: #ddd;
+
+  }
+  .contactForm button {
+    padding: 12px;
+    background-color: white; /* Light purple button */
+    color: black; /* Dark purple text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* font-weight: bold; */
+    margin-top: 15px;
+    font-size: 1.2rem;
+
+  }
+  
+  .contactForm button:hover {
+    background-color: #bba3e0; /* Slightly darker purple */
+  }
+  
+  /* Right Flexbox */
+  .rightContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .contactImage {
+    width: 90%; /* Make the image responsive */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+  }
+  
+   
+ .contactInfoItem{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin: 20px 0;
+    font-size: 1.2rem;
+ } 
+
+ .contactInfoItem span{
+    padding-top: 3px;
+ }
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .contactPage {
+      padding: 0 20px 50px; /* Reduce padding for smaller screens */
+    }
+  
+    .contactContent {
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center align content */
+      gap: 20px; /* Adjust gap between sections */
+    }
+  
+    .leftContainer {
+      width: 100%; /* Take full width on smaller screens */
+      gap: 15px; /* Adjust spacing */
+    }
+  
+    .headings .mainhead {
+      font-size: 1.8rem; /* Slightly smaller heading */
+    }
+  
+    .description {
+      font-size: 1rem; /* Adjust text size */
+    }
+  
+    .contactForm input,
+    .contactForm textarea {
+      font-size: 1rem; /* Adjust font size */
+      padding: 10px; /* Reduce padding */
+    }
+  
+    .contactForm button {
+      font-size: 1rem; /* Adjust button text size */
+      padding: 10px; /* Adjust button padding */
+    }
+  
+    .rightContainer {
+      width: 100%; /* Full width for smaller screens */
+      align-items: center; /* Center align content */
+    }
+  
+    .contactImage {
+      width: 100%; /* Image takes full width */
+      max-width: 300px; /* Add a max-width to prevent excessive scaling */
+    }
+  
+    .contactInfoItem {
+      font-size: 1rem; /* Smaller font size */
+      gap: 10px; /* Adjust spacing */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .contactPage {
+      padding: 0 150px 100px; /* Increase padding for larger screens */
+    }
+  
+    .contactContent {
+      gap: 50px; /* Increase gap between flex items */
+    }
+  
+    .headings .mainhead {
+      font-size: 2.5rem; /* Larger heading */
+    }
+  
+    .contactForm input,
+    .contactForm textarea {
+      font-size: 1.25rem; /* Larger font size */
+      padding: 15px; /* Increase padding */
+    }
+  
+    .contactForm button {
+      font-size: 1.3rem; /* Larger button text size */
+      padding: 15px; /* Increase button padding */
+    }
+  
+    .contactImage {
+      max-width: 400px; /* Allow larger image */
+    }
+  
+    .contactInfoItem {
+      font-size: 1.3rem; /* Larger font size for contact info */
+      gap: 20px; /* Adjust spacing for desktop */
+    }
+  }
+  
