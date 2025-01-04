@@ -1,233 +1,108 @@
-.cardCon {
-  margin: 20px;
+.page{
+  padding: 0 20px;
 }
-
-.upcomingEventTitle {
-  text-align: left; /* Align text to the left */
-  margin-bottom: 20px; /* Add bottom margin */
-}
-
-
-.eventCardContainer {
+.headings {
+  margin: 2rem 0;
   display: flex;
-  padding: 30px;
-  align-items: left; /* Align items vertically */
-  border: 1px solid white; /* Light border */
-  border-radius: 10px; /* Rounded corners */
-  background: transparent;
-  overflow: hidden; /* Prevent overflow */
-  margin-bottom: 80px;
-  width: 100%; /* Set width to full */
+  flex-direction: column;
+  align-items: center;
+}
+.mainhead {
+  font-weight: 700;
+  text-align:center ;
+  font-size: 2.2rem;
+}
+.subhead {
+  /* margin: 1rem; */
+  color: var(--c3);
+  /* margin-top: 3rem; */
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.125rem;
 }
 
-.eventImage {
-  flex: 1; /* Allow image container to take up space */
-  border-radius: 20px;
-}
-.imageWrapper {
-  position: relative; /* Establish a positioning context */
-  width: 200px; /* Set a fixed width for the square */
-  height: 220px; /* Set a fixed height to maintain square aspect ratio */
-  overflow: hidden; /* Hide any overflow from the image */
-  border-radius: 10px; /* Add rounded corners */
-  margin-right: 20px; /* Space between image and text */
+@media screen and (max-width: 768px) {
+  .page{
+      padding: 0 20px;
+  }
+  .mainhead {
+      font-size: 2rem;
+  }
 }
 
-.imageWrapper img {
-  position: absolute; /* Position the image absolutely within the wrapper */
-  top: 50%; /* Center the image vertically */
-  left: 50%; /* Center the image horizontally */
-  width: auto; /* Allow width to adjust automatically */
-  height: 100%; /* Set height to fill the wrapper */
-  min-width: 100%; /* Ensure the minimum width covers the wrapper */
-  object-fit: cover; /* Cover the entire area of the wrapper without distortion */
-  transform: translate(-50%, -50%); /* Adjust position to center the image */
+
+/* HERE EVENT */
+.upcomingEvents{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
 }
+
+.upcomingEventItem{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 40px 0;
+  /* border: 1px solid whitesmoke; */
+}
+
+.upcomingEvents > .upcomingEventItem:nth-child(even) {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.upcomingEvents > .upcomingEventItem:nth-child(even) .upcomingEventItemContent {
+  padding-left: 0;
+  padding-right: 50px;
+}
+
+.upcomingEventItem img{
+  height: 400px;
+  border-radius: 15px;
+}
+
+.upcomingEventItemContent{
+  padding: 0 50px;
+}
+
+.upcomingEventItemSubTitle{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.upcomingEventItemSubTitle span{
+  font-size: 1.5rem;
+  color: #5BDAED;
+  padding-right: 10px;
+}
+
+.upcomingEventItemTitle{
+  font-size: 2rem;
+  line-height: 2.2rem;
+  font-weight: bolder;
+  margin: 10px 0;
+}
+
+.upcomingEventItemDesc{
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  margin: 10px 0;
+}
+
+.upcomingEventItemBtn{
+  color: #fff;
+  font-size: 1.2rem;
+}
+
 
 .noUpcomingEventMessage {
   position: relative; /* Positioning context for the pseudo-element */
-  padding: 20px; /* Add padding for spacing */
+  padding: 10px 20px; /* Add padding for spacing */
   border-radius: 8px; /* Rounded corners */
-  background: linear-gradient(45deg, #472267, #6A0FBA);
+  background: linear-gradient(to bottom right, #6666ff 0%, #cc66ff 100%);
 
-  color: white; /* White text color for better contrast */
-  text-align: center; /* Center the text */
-  margin-top: 20px; /* Space above the message */
   font-size: 1.2rem; /* Slightly larger font size */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
 
-.noUpcomingEventMessage::before {
-  content: ""; /* Required for pseudo-element */
-  position: absolute; /* Position it absolutely within the parent */
-  top: -4px; /* Adjust to create a border effect */
-  left: -4px; /* Adjust to create a border effect */
-  right: -4px; /* Adjust to create a border effect */
-  bottom: -4px; /* Adjust to create a border effect */
-  
-  /* More visible gradient for the border */
-  background: linear-gradient(135deg, rgba(81, 18, 52, 0.9), rgba(75, 0, 130, 0.9)); /* Bright pink to dark purple gradient */
-  
-  border-radius: inherit; /* Match the parent’s border radius */
-  z-index: -1; /* Place it behind the text */
-}
-
-
-
-
-.image {
-  position: absolute; /* Position the image absolutely within the wrapper */
-  top: 0;
-  left: 0;
-  width: 100%; /* Fill the wrapper */
-  height: 100%; /* Fill the wrapper */
-  object-fit: cover; /* Maintain aspect ratio and cover the area */
-  border-radius: 20px; /* Apply rounded corners */
-}
-
-.eventDetails {
-  flex: 2; /* Allow details container to take up more space */
-  padding: 20px; /* Add padding around text */
-}
-
-.eventTitle {
-  font-size: 1.5rem; /* Title size */
-  margin-bottom: 10px; /* Space below title */
-}
-
-.eventDate {
-  font-size: 1rem; /* Date size */
-  color: gray; /* Date color */
-}
-
-.eventDescription {
-  font-size: 0.9rem; /* Description size */
-}
-
-  
-  .cardCon {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align items */
-  }
-  
-  .eventCardsContainer {
-      justify-content: center; /* Center align cards on smaller screens */
-      gap: 15px;
-  }
-
-.loadMoreButtonContainer button {
-  border: none;
-  display: inline-block;
-  border-radius: 99px;
-  color: white;
-  position: relative;
-  z-index: 1;
-  font-size: 14px;
-  padding: 17px 35px;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 2px;
-  margin-top: 40px;
-  
-  /* Add box-shadow for thick border effect */
-  box-shadow: 0 0 0 4px #503b9a; /* Adjust thickness and color as needed */
-}
-
-.loadMoreButtonContainer button:before, 
-.loadMoreButtonContainer button:after {
-  content: ' ';
-  position: absolute;
-  border-radius: 99px;
-  
-}
-
-.loadMoreButtonContainer button:before {
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -2;
-  background: #503b9a;
-  background: -moz-linear-gradient(left, #503b9a 0%, #269cc1 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#503b9a), color-stop(100%,#269cc1));
-  background: -webkit-linear-gradient(left, #503b9a 0%,#269cc1 100%);
-  background: -o-linear-gradient(left, #503b9a 0%,#269cc1 100%);
-  background: -ms-linear-gradient(left, #503b9a 0%,#269cc1 100%);
-  background: linear-gradient(to right, #503b9a 0%,#269cc1 100%);
-}
-
-.loadMoreButtonContainer button:after {
-  top: 2px; 
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
-  background-color: black;
-  z-index: -1;
-  opacity: 1;
-  transition: all .6s ease-in-out;
-}
-
-.loadMoreButtonContainer button:hover:after {
-   opacity: .5; /* Optional change on hover */
-}
-
-.calendarHeading {
-  color: #FFFFFF; /* White color for the text */
-  margin-bottom: 10px; /* Space between heading and iframe */
-  text-align: center; /* Center align the heading */
-}
-.calendarContainer {
-  margin-top: 40px; /* Space above the calendar */
-  text-align: center; /* Center align the iframe */
-  padding: 20px; /* Optional padding around the iframe */
-  border-radius: 10px; /* Optional rounded corners */
-}
-
-.calendarContainer iframe {
-  max-width: 100%; /* Make iframe responsive */
-  border-radius: 10px; /* Optional rounded corners for iframe */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  filter: invert(1) hue-rotate(180deg); 
-}
-
-/* Additional styles for the slider */
-.slick-slide {
-  transition: transform 0.3s ease; /* Smooth transition effect */
-}
-
-.slick-list {
-  margin: 0 -15px; /* Adjust margins to align with card container */
-}
-
-.slick-slide > div {
-  padding: 0 15px; /* Add padding around each slide */
-}
-
-.slick-prev, .slick-next {
-  color: white; /* Change arrow color to white for better visibility */
-}
-
-.slick-prev:before, .slick-next:before {
-  font-size: 24px; /* Increase arrow size */
-}
-
-.slick-prev {
-  left: -30px; /* Position left arrow */
-}
-
-.slick-next {
-  right: -30px; /* Position right arrow */
-}
-
-/* Optional: Style for dots */
-.slick-dots li button:before {
-  color: white; /* Change dot color to white */
-}
-
-.slick-dots li.slick-active button:before {
-  color: #269cc1; /* Change active dot color */
 }
 

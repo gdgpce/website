@@ -14,7 +14,6 @@ export default function Page() {
                 </div>
                 <DottedDash />
             </div>
-
             <FAQs />
         </div>
     );

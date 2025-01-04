@@ -1,5 +1,5 @@
 .page {
-    position: absolute;
+    position: relative;
     padding-top: 100px;
     width: 100%;
 }

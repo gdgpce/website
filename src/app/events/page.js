@@ -3,8 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
-import EventCard from "@/components/eventcard/EventCard"; // Ensure this is used correctly
+import EventCard from "@/components/eventcard/EventCard";
+import { DottedDash } from "@/components/dash/Dash";
 import { Skeleton } from "antd";
+import Link from "next/link";
+// import {Image} from "@nextui-org/react";
 
 const setDate = (date) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
@@ -61,7 +64,7 @@ const EventsPage = () => {
     "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=3&status=Completed&order=-start_date&fields=title,start_date,event_type_title,cropped_picture_url,slug";
 
   const upcomingURL =
-    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=1&status=Completed&fields=title,start_date,event_type_title,cropped_picture_url,slug,description";
+    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=3&status=Completed&order=-start_date&fields=title,start_date,event_type_title,picture,slug,description_short";
 
   const fetchEvents = async (url) => {
     setLoading(true);
@@ -89,12 +92,13 @@ const EventsPage = () => {
       const data = await response.json();
       
       if (data.results.length > 0) {
-        setUpcomingEvent(data.results[0]); // Set the first upcoming event
+        setUpcomingEvent(data.results); 
         setNoUpcomingEvents(false); // Reset no upcoming events flag
       } else {
         setNoUpcomingEvents(true); // Set flag for no upcoming events
       }
     } catch (err) {
+      setNoUpcomingEvents(true);
       setError(err);
     }
   };
@@ -115,78 +119,88 @@ const EventsPage = () => {
 
   return (
     <div>
-      <div className={styles.headerCon}>
-        <Breadcrumb title="Events" />
-      </div>
+      <Breadcrumb title="Events" />
+      <div className={styles.page}>
+        <div className={styles.headings}>
+          <div className={styles.mainhead}>Upcoming Events</div>
+          <DottedDash />
+        </div>
 
-      {/* Dynamic Section for Upcoming Event */}
-      <div className={styles.cardCon}>
-        <h2 className={styles.upcomingEventTitle}>Upcoming Event</h2>
-
+        <div className={styles.upcomingEvents}>
         {noUpcomingEvents ? (
-            <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p>
-        ) : (
-          upcomingEvent && (
-            <div className={styles.eventCardContainer}>
-              <div className={styles.imageWrapper}>
-                <img
-                  src={upcomingEvent.cropped_picture_url || "https://via.placeholder.com/150"}
-                  alt={upcomingEvent.title || "Upcoming Event"}
-                  className={styles.image}
-                />
-              </div>
-              <div className={styles.eventDetails}>
-                <h3 className={styles.eventTitle}>{upcomingEvent.title}</h3>
-                <p className={styles.eventDate}>{setDate(upcomingEvent.start_date)}</p>
-                <p className={styles.eventDescription}>
-                  {upcomingEvent.description || "No description available."}
-                </p>
+              <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p>
+          ) : (
+            upcomingEvent?.map((event, index) => (
+              <div key={index} className={styles.upcomingEventItem}>
+              <img src={event.picture} alt="event" />
+              <div className={styles.upcomingEventItemContent}>
+                <div className={styles.upcomingEventItemSubTitle}><span>{setDate(event.start_date)}</span> {event.event_type_title}</div>
+                <div className={styles.upcomingEventItemTitle}>{event.title}</div>
+                <div className={styles.upcomingEventItemDesc}>{event.description_short}</div>
+                <Link href={"/events/" + event.slug} className={styles.upcomingEventItemBtn}>Learn More</Link>
               </div>
             </div>
-          )
-        )}
+            ))
+          )}
+          {/* <div className={styles.upcomingEventItem}>
+            <img src="/temp/pic.webp" alt="event" />
+            <div className={styles.upcomingEventItemContent}>
+              <div className={styles.upcomingEventItemSubTitle}><span>Dec 17, 2024</span> Workshop / Study Group</div>
+              <div className={styles.upcomingEventItemTitle}>Tech Winter Break GDG On Campus PCE : Android Dev Workshop</div>
+              <div className={styles.upcomingEventItemDesc}>
+                Learn to build your own Android apps from scratch using Android Studio and Kotlin in just 2 days! The workshop is perfect for those who are curious about mobile app development but don’t know where to start.
+              </div>
+              <Link href="/events/upcoming-event" className={styles.upcomingEventItemBtn}>Learn More</Link>
+            </div>
+          </div> */}
+              {/* <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p> */}
+        </div>
+
+        <div className={styles.headings}>
+          <div className={styles.mainhead}>Past Events</div>
+          <DottedDash />
+        </div>
+
+        {/* Dynamic Section for Past Events */}
+        <div className={styles.cardCon}>
+          <EventList events={events} loading={loading} error={error} />
+          {nextPage && (
+            <div className={styles.loadMoreButtonContainer}>
+              <button onClick={handleLoadMore} disabled={loading}>
+                {loading ? "Loading..." : "Show More"}
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* Google Calendar Iframe Section */}
+        <div className={styles.calendarContainer}>
+          <h2 className={styles.calendarHeading}>Event Calendar</h2> {/* Heading for the calendar */}
+          <iframe 
+            src="https://calendar.google.com/calendar/embed?src=6a3cfe19b2d8faa0ac66cf287a506e97630d1d7cc947bc6231696e7b4e49eb70%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23000000&color=%23FFFFFF" 
+            style={{ border: '0', backgroundColor: '#000000' }} 
+            width="800" 
+            height="600" 
+            frameBorder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
+
+        {/* <div>
+            <Skeleton.Node
+            active={true}
+            style={{
+              width: 200,
+              height: 150,
+              backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+            }}
+          />
+          <Skeleton style={{
+              width: 200,
+              backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
+            }} />
+          </div> */}
       </div>
-
-      {/* Dynamic Section for Past Events */}
-      <div className={styles.cardCon}>
-        <h2>Past Events</h2>
-        <EventList events={events} loading={loading} error={error} />
-        {nextPage && (
-          <div className={styles.loadMoreButtonContainer}>
-            <button onClick={handleLoadMore} disabled={loading}>
-              {loading ? "Loading..." : "Show More"}
-            </button>
-          </div>
-        )}
-      </div>
-
-      {/* Google Calendar Iframe Section */}
-      <div className={styles.calendarContainer}>
-  <h2 className={styles.calendarHeading}>Event Calendar</h2> {/* Heading for the calendar */}
-  <iframe 
-    src="https://calendar.google.com/calendar/embed?src=6a3cfe19b2d8faa0ac66cf287a506e97630d1d7cc947bc6231696e7b4e49eb70%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23000000&color=%23FFFFFF" 
-    style={{ border: '0', backgroundColor: '#000000' }} 
-    width="800" 
-    height="600" 
-    frameBorder="0" 
-    scrolling="no">
-  </iframe>
-</div>
-
-      {/* <div>
-          <Skeleton.Node
-          active={true}
-          style={{
-            width: 200,
-            height: 150,
-            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
-          }}
-        />
-        <Skeleton style={{
-            width: 200,
-            backgroundImage:"linear-gradient(to right, rgb(17 10 70 / 6%) 25%, rgb(44 25 102 / 45%) 37%, rgb(114 82 246 / 60%) 63%)"
-          }} />
-        </div> */}
     </div>
   );
 };
