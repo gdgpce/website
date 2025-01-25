@@ -58,7 +58,8 @@
 }
 
 .upcomingEventItem img{
-  height: 400px;
+  max-width: 400px;
+  max-height: 400px;
   border-radius: 15px;
 }
 
@@ -106,3 +107,153 @@
 
 }
 
+.loadMoreButtonContainer button {
+  border: none;
+  display: inline-block;
+  border-radius: 99px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  font-size: 14px;
+  padding: 17px 35px;
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  
+  /* Add box-shadow for thick border effect */
+  box-shadow: 0 0 0 4px #503b9a; /* Adjust thickness and color as needed */
+}
+
+.loadMoreButtonContainer button:before, 
+.loadMoreButtonContainer button:after {
+  content: ' ';
+  position: absolute;
+  border-radius: 99px;
+  
+}
+
+.loadMoreButtonContainer button:before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -2;
+  background: #503b9a;
+  background: -moz-linear-gradient(left, #503b9a 0%, #269cc1 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#503b9a), color-stop(100%,#269cc1));
+  background: -webkit-linear-gradient(left, #503b9a 0%,#269cc1 100%);
+  background: -o-linear-gradient(left, #503b9a 0%,#269cc1 100%);
+  background: -ms-linear-gradient(left, #503b9a 0%,#269cc1 100%);
+  background: linear-gradient(to right, #503b9a 0%,#269cc1 100%);
+}
+
+.loadMoreButtonContainer button:after {
+  top: 2px; 
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background-color: black;
+  z-index: -1;
+  opacity: 1;
+  transition: all .6s ease-in-out;
+}
+
+.loadMoreButtonContainer button:hover:after {
+   opacity: .5; /* Optional change on hover */
+}
+
+.eventCardsContainer {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align cards on smaller screens */
+  gap: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  .upcomingEvents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+
+  }
+  
+  .upcomingEventItem{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px 0 40px;
+    /* border: 1px solid whitesmoke; */
+  }
+  
+  .upcomingEvents > .upcomingEventItem:nth-child(even) {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .upcomingEvents > .upcomingEventItem:nth-child(even) .upcomingEventItemContent {
+    padding-left: 0;
+    padding-right: 0;
+    
+  }
+  
+  .upcomingEventItem img{
+    width: 100%;
+    max-height: 400px;
+    border-radius: 15px;
+  }
+  
+  .upcomingEventItemContent{
+    padding: 0;
+    margin-top: 40px;
+  }
+  
+  .upcomingEventItemSubTitle{
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .upcomingEventItemSubTitle span{
+    font-size: 1.1rem;
+    color: #5BDAED;
+    padding-right: 2px;
+  }
+  
+  .upcomingEventItemTitle{
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: bolder;
+    margin: 5px 0;
+  }
+  
+  .upcomingEventItemDesc{
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 15px 0;
+  }
+  
+  .upcomingEventItemBtn{
+    color: #fff;
+    font-size: 1rem;
+
+  }
+}
+
+.calendarContainer {
+  text-align: center; /* Center align the iframe */
+  padding: 0px; /* Optional padding around the iframe */
+  border-radius: 10px; /* Optional rounded corners */
+  margin-bottom: 40px;
+}
+
+.calendarContainer iframe {
+  max-width: 100%; /* Make iframe responsive */
+  border-radius: 10px; /* Optional rounded corners for iframe */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}

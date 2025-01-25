@@ -14,10 +14,10 @@ export default function Sponsors() {
             </div>
             <div className={styles.group}>
                 <TeamCard
-                    name={"Coming Soon!"}
+                    name={""}
                     color={"#2effea"}
                     position={""}
-                    imgURL={""}
+                    imgURL={"/assets/sponsor1.png"}
                 />
             </div>
         </div>

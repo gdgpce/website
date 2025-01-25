@@ -26,8 +26,7 @@
   }
   
   .description {
-    font-size: 1.2rem;
-    color: white; /* Light purple text */
+    font-size: 1.1rem;
   }
   
   .contactForm {
@@ -38,7 +37,7 @@
   
   .contactForm label {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: white; 
     margin-top: 10px;
   }
@@ -52,7 +51,7 @@
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     resize: none;
   }
   .contactForm input::placeholder,
@@ -100,7 +99,7 @@
     gap: 20px;
     align-items: flex-start;
     margin: 20px 0;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
  } 
 
  .contactInfoItem span{
@@ -108,7 +107,7 @@
  }
 
 /* Responsive Styling */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .contactPage {
       padding: 0 20px 50px; /* Reduce padding for smaller screens */
     }
@@ -158,38 +157,4 @@
       gap: 10px; /* Adjust spacing */
     }
   }
-  
-  @media (min-width: 1200px) {
-    .contactPage {
-      padding: 0 150px 100px; /* Increase padding for larger screens */
-    }
-  
-    .contactContent {
-      gap: 50px; /* Increase gap between flex items */
-    }
-  
-    .headings .mainhead {
-      font-size: 2.5rem; /* Larger heading */
-    }
-  
-    .contactForm input,
-    .contactForm textarea {
-      font-size: 1.25rem; /* Larger font size */
-      padding: 15px; /* Increase padding */
-    }
-  
-    .contactForm button {
-      font-size: 1.3rem; /* Larger button text size */
-      padding: 15px; /* Increase button padding */
-    }
-  
-    .contactImage {
-      max-width: 400px; /* Allow larger image */
-    }
-  
-    .contactInfoItem {
-      font-size: 1.3rem; /* Larger font size for contact info */
-      gap: 20px; /* Adjust spacing for desktop */
-    }
-  }
-  
+ 

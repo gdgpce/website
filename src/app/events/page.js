@@ -61,10 +61,10 @@ const EventsPage = () => {
   const hasFetched = useRef(false);
 
   const initialURL =
-    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=3&status=Completed&order=-start_date&fields=title,start_date,event_type_title,cropped_picture_url,slug";
+    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=40&status=Completed&order=-start_date&fields=title,start_date,event_type_title,picture,slug,description_short";
 
   const upcomingURL =
-    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=3&status=Completed&order=-start_date&fields=title,start_date,event_type_title,picture,slug,description_short";
+    "https://gdg.community.dev/api/event_slim/for_chapter/1915/?page_size=40&status=Live&order=-start_date&fields=title,start_date,event_type_title,picture,slug,description_short";
 
   const fetchEvents = async (url) => {
     setLoading(true);
@@ -121,13 +121,50 @@ const EventsPage = () => {
     <div>
       <Breadcrumb title="Events" />
       <div className={styles.page}>
-        <div className={styles.headings}>
-          <div className={styles.mainhead}>Upcoming Events</div>
-          <DottedDash />
-        </div>
+
 
         <div className={styles.upcomingEvents}>
         {noUpcomingEvents ? (
+            <></>
+              // <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p>
+          ) : (
+            <div>
+              <div className={styles.headings}>
+                <div className={styles.mainhead}>Upcoming Events</div>
+                <DottedDash />
+              </div>
+              {upcomingEvent?.map((event, index) => (
+              <div key={index} className={styles.upcomingEventItem}>
+              <img src={event.picture} alt="event" />
+              <div className={styles.upcomingEventItemContent}>
+                <div className={styles.upcomingEventItemSubTitle}><span>{setDate(event.start_date)}</span> {event.event_type_title}</div>
+                <div className={styles.upcomingEventItemTitle}>{event.title}</div>
+                <div className={styles.upcomingEventItemDesc}>{event.description_short}</div>
+                <Link href={"/events/" + event.slug} className={styles.upcomingEventItemBtn}>Learn More</Link>
+              </div>
+            </div>
+            ))}
+            </div>
+          )}
+
+          <div className={styles.headings}>
+            <div className={styles.mainhead}>Previous Events</div>
+            <DottedDash />
+          </div>
+
+          {events?.map((event, index) => (
+              <div key={index} className={styles.upcomingEventItem}>
+              <img src={event.picture} alt="event" />
+              <div className={styles.upcomingEventItemContent}>
+                <div className={styles.upcomingEventItemSubTitle}><span>{setDate(event.start_date)}</span> {event.event_type_title}</div>
+                <div className={styles.upcomingEventItemTitle}>{event.title}</div>
+                <div className={styles.upcomingEventItemDesc}>{event.description_short}</div>
+                <Link href={"/events/" + event.slug} className={styles.upcomingEventItemBtn}>Learn More</Link>
+              </div>
+            </div>
+            ))}
+
+{/* {noUpcomingEvents ? (
               <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p>
           ) : (
             upcomingEvent?.map((event, index) => (
@@ -142,6 +179,23 @@ const EventsPage = () => {
             </div>
             ))
           )}
+         */}
+
+        <div className={styles.headings}>
+          <div className={styles.mainhead}>Timeline</div>
+          <DottedDash />
+        </div>
+        <div className={styles.calendarContainer}>
+          <iframe 
+            src="https://calendar.google.com/calendar/embed?src=6a3cfe19b2d8faa0ac66cf287a506e97630d1d7cc947bc6231696e7b4e49eb70%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23000000&color=%23FFFFFF" 
+            style={{ border: '0', backgroundColor: '#000000' }} 
+            width="800" 
+            height="600" 
+            frameBorder="0" 
+            scrolling="no">
+          </iframe>
+        </div>
+        </div>
           {/* <div className={styles.upcomingEventItem}>
             <img src="/temp/pic.webp" alt="event" />
             <div className={styles.upcomingEventItemContent}>
@@ -154,15 +208,15 @@ const EventsPage = () => {
             </div>
           </div> */}
               {/* <p className={styles.noUpcomingEventMessage}>No events are scheduled at this time. Keep an eye out for future announcements!</p> */}
-        </div>
 
+{/* 
         <div className={styles.headings}>
           <div className={styles.mainhead}>Past Events</div>
           <DottedDash />
-        </div>
+        </div> */}
 
         {/* Dynamic Section for Past Events */}
-        <div className={styles.cardCon}>
+        {/* <div className={styles.cardCon}>
           <EventList events={events} loading={loading} error={error} />
           {nextPage && (
             <div className={styles.loadMoreButtonContainer}>
@@ -171,11 +225,11 @@ const EventsPage = () => {
               </button>
             </div>
           )}
-        </div>
+        </div> */}
 
         {/* Google Calendar Iframe Section */}
-        <div className={styles.calendarContainer}>
-          <h2 className={styles.calendarHeading}>Event Calendar</h2> {/* Heading for the calendar */}
+        {/* <div className={styles.calendarContainer}>
+          <h2 className={styles.calendarHeading}>Event Calendar</h2> 
           <iframe 
             src="https://calendar.google.com/calendar/embed?src=6a3cfe19b2d8faa0ac66cf287a506e97630d1d7cc947bc6231696e7b4e49eb70%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23000000&color=%23FFFFFF" 
             style={{ border: '0', backgroundColor: '#000000' }} 
@@ -184,7 +238,7 @@ const EventsPage = () => {
             frameBorder="0" 
             scrolling="no">
           </iframe>
-        </div>
+        </div> */}
 
         {/* <div>
             <Skeleton.Node

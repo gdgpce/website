@@ -1,5 +1,10 @@
 [
-    {
+      {
+        "Name": "Dr. Sandeep M. Joshi",
+        "Position": "Principal of PCE",
+        "ImagePath": ""
+      },
+      {
         "Name": "Dr. Sharvari Govilkar Govilkar",
         "Position": "HOD of Computer Engineering Department",
         "ImagePath": "/team/sharvariMaam.webp"
