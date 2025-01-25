@@ -10,7 +10,7 @@ export default function LoadingOverlay() {
 
     useEffect(() => {
         // Handle initial load
-        const timeout = setTimeout(() => setAnimating(false), 1); // Show animation for 6 seconds on initial load
+        const timeout = setTimeout(() => setAnimating(false), 6000); // Show animation for 6 seconds on initial load
 
         return () => clearTimeout(timeout); // Clean up timeout on unmount
     }, []);
