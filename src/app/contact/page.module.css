@@ -1,160 +1,159 @@
 /* General Styling */
 .contactPage {
-   padding: 0 100px 100px ;
+   padding: 0 100px 100px; 
 }
-  
-  /* Flexbox container */
-  .contactContent {
+
+/* Flexbox container */
+.contactContent {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
     padding: 20px;
-  }
-  
-  /* Left Flexbox */
-  .leftContainer {
+}
+
+/* Left Flexbox */
+.leftContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .headings .mainhead {
+}
+
+.headings .mainhead {
     font-size: 2.2rem;
     font-weight: bold;
-  }
-  
-  .description {
+    color: var(--secondary);
+}
+
+.description {
     font-size: 1.1rem;
-  }
-  
-  .contactForm {
+    color: var(--secondary);
+}
+
+.contactForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  }
-  
-  .contactForm label {
+}
+
+.contactForm label {
     font-weight: bold;
     font-size: 1.1rem;
-    color: white; 
+    color: white;
     margin-top: 10px;
-  }
-  
-  .contactForm input,
-  .contactForm textarea {
-    padding: 15px ;
-    border: none;
+}
+
+.contactForm input,
+.contactForm textarea {
+    padding: 15px;
+    border: none;   
     border-radius: 5px;
-    background-color: #351763; /* Medium purple background */
-    color: #fff;
+    background-color:  #351763;
+    color: #fff ;
     font-family: Arial, Helvetica, sans-serif;
     outline: none;
     font-size: 1.05rem;
     resize: none;
-  }
-  .contactForm input::placeholder,
-  .contactForm textarea::placeholder {
-    color: #ddd;
+}
 
-  }
-  .contactForm button {
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    color: #ddd;
+}
+
+.contactForm button {
     padding: 12px;
-    background-color: white; /* Light purple button */
-    color: black; /* Dark purple text */
+    background-color: var(--secondary);
+    color: var(--primary);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* font-weight: bold; */
     margin-top: 15px;
     font-size: 1.2rem;
+}
 
-  }
-  
-  .contactForm button:hover {
-    background-color: #bba3e0; /* Slightly darker purple */
-  }
-  
-  /* Right Flexbox */
-  .rightContainer {
+.contactForm button:hover {
+    background-color: var(--accent);
+}
+
+/* Right Flexbox */
+.rightContainer {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     padding: 0 20px;
-  }
-  
-  .contactImage {
-    width: 90%; /* Make the image responsive */
+}
+
+.contactImage {
+    width: 90%;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-   
- .contactInfoItem{
+.contactInfoItem{
     display: flex;
     gap: 20px;
     align-items: flex-start;
     margin: 20px 0;
     font-size: 1.1rem;
- } 
+    color: var(--secondary);
+}
 
- .contactInfoItem span{
+.contactInfoItem span{
     padding-top: 3px;
- }
+}
 
 /* Responsive Styling */
 @media (max-width: 900px) {
     .contactPage {
-      padding: 0 20px 50px; /* Reduce padding for smaller screens */
+      padding: 0 20px 50px;
     }
-  
+
     .contactContent {
-      flex-direction: column; /* Stack content vertically */
-      align-items: center; /* Center align content */
-      gap: 20px; /* Adjust gap between sections */
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
-  
+
     .leftContainer {
-      width: 100%; /* Take full width on smaller screens */
-      gap: 15px; /* Adjust spacing */
+      width: 100%;
+      gap: 15px;
     }
-  
+
     .headings .mainhead {
-      font-size: 1.8rem; /* Slightly smaller heading */
+      font-size: 1.8rem;
     }
-  
+
     .description {
-      font-size: 1rem; /* Adjust text size */
+      font-size: 1rem;
     }
-  
+
     .contactForm input,
     .contactForm textarea {
-      font-size: 1rem; /* Adjust font size */
-      padding: 10px; /* Reduce padding */
+      font-size: 1rem;
+      padding: 10px;
     }
-  
+
     .contactForm button {
-      font-size: 1rem; /* Adjust button text size */
-      padding: 10px; /* Adjust button padding */
+      font-size: 1rem;
+      padding: 10px;
     }
-  
+
     .rightContainer {
-      width: 100%; /* Full width for smaller screens */
-      align-items: center; /* Center align content */
+      width: 100%;
+      align-items: center;
     }
-  
+
     .contactImage {
-      width: 100%; /* Image takes full width */
-      max-width: 300px; /* Add a max-width to prevent excessive scaling */
+      width: 100%;
+      max-width: 300px;
     }
-  
+
     .contactInfoItem {
-      font-size: 1rem; /* Smaller font size */
-      gap: 10px; /* Adjust spacing */
+      font-size: 1rem;
+      gap: 10px;
     }
-  }
- 
+}

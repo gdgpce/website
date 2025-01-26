@@ -4,9 +4,11 @@ import { LongDash, SideDash } from "@/components/dash/Dash";
 import { DoubleRightOutlined } from "@ant-design/icons";
 import styles from "./page.module.css";
 
+
+
 export default function About() {
   return (
-    <div className={styles.about}>
+    <div  id="about" className={styles.about}>
       <div className={styles.secContainer + " " + styles.left}>
         <div className={styles.contentCon}>
           <div>

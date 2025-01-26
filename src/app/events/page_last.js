@@ -120,7 +120,7 @@ const EventsPage = () => {
       </div>
 
       {/* Dynamic Section for Upcoming Event */}
-      <div className={styles.cardCon}>
+      <div id="upcoming"className={styles.cardCon}>
         <h2 className={styles.upcomingEventTitle}>Upcoming Event</h2>
 
         {noUpcomingEvents ? (
@@ -148,7 +148,7 @@ const EventsPage = () => {
       </div>
 
       {/* Dynamic Section for Past Events */}
-      <div className={styles.cardCon}>
+      <div id="previous" className={styles.cardCon}>
         <h2>Past Events</h2>
         <EventList events={events} loading={loading} error={error} />
         {nextPage && (
@@ -161,7 +161,7 @@ const EventsPage = () => {
       </div>
 
       {/* Google Calendar Iframe Section */}
-      <div className={styles.calendarContainer}>
+      <div id="timeline"className={styles.calendarContainer}>
   <h2 className={styles.calendarHeading}>Event Calendar</h2> {/* Heading for the calendar */}
   <iframe 
     src="https://calendar.google.com/calendar/embed?src=6a3cfe19b2d8faa0ac66cf287a506e97630d1d7cc947bc6231696e7b4e49eb70%40group.calendar.google.com&ctz=Asia%2FKolkata&bgcolor=%23000000&color=%23FFFFFF" 

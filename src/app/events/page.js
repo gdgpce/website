@@ -130,7 +130,7 @@ const EventsPage = () => {
           ) : (
             <div>
               <div className={styles.headings}>
-                <div className={styles.mainhead}>Upcoming Events</div>
+                <div id="upcoming" className={styles.mainhead}>Upcoming Events</div>
                 <DottedDash />
               </div>
               {upcomingEvent?.map((event, index) => (
@@ -148,7 +148,7 @@ const EventsPage = () => {
           )}
 
           <div className={styles.headings}>
-            <div className={styles.mainhead}>Previous Events</div>
+            <div id="previous" className={styles.mainhead}>Previous Events</div>
             <DottedDash />
           </div>
 
@@ -182,7 +182,7 @@ const EventsPage = () => {
          */}
 
         <div className={styles.headings}>
-          <div className={styles.mainhead}>Timeline</div>
+          <div id="timeline" className={styles.mainhead}>Timeline</div>
           <DottedDash />
         </div>
         <div className={styles.calendarContainer}>

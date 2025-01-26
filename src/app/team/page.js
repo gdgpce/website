@@ -14,7 +14,8 @@ export default function Team() {
             <Breadcrumb title="Team" />
             <div className={styles.page}>
                 <div className={styles.headings}>
-                    <div className={styles.mainhead}>UNDER THE GUIDANCE OF</div>
+                    
+                    <div  id="faculty" className={styles.mainhead}>UNDER THE GUIDANCE OF</div>
                     <DottedDash />
                 </div>
                 <div className={styles.group + " " + styles.faculty}>
@@ -29,7 +30,7 @@ export default function Team() {
                     ))}
                 </div>
 
-                <div className={styles.headings}>
+                <div id="core" className={styles.headings}>
                     {/* <div className={styles.subhead}>MANAGED BY</div> */}
                     {/* <LongDash /> */}
                     <div className={styles.mainhead}>CORE TEAM</div>
@@ -56,7 +57,7 @@ export default function Team() {
                 <div>
                     {/* Loop through each category in MemberData */}
                     {Object.keys(MemberData).map((category, categoryIndex) => (
-                        <div key={categoryIndex}>
+                        <div id="members" key={categoryIndex}>
                             {/* Heading for each category */}
                             <div className={styles.headings}>
                                 <div className={styles.mainhead}>
