@@ -38,17 +38,17 @@
             "ImagePath": ""
         },
         {
-            "Name": "Avani Srivastav",
+            "Name": "Shridhar Ganesh Khare",
+            "Position": "Technical Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Avani Srivastava",
             "Position": "Technical Member",
             "ImagePath": ""
         },
         {
             "Name": "Basawaraj V",
-            "Position": "Technical Member",
-            "ImagePath": ""
-        },
-        {
-            "Name": "Shridhar Ganesh Khare",
             "Position": "Technical Member",
             "ImagePath": ""
         },
@@ -60,6 +60,11 @@
         {
             "Name": "Suyash Ware",
             "Position": "Web Dev Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Shreyas Dabhade",
+            "Position": "Technical Member",
             "ImagePath": ""
         }
     ],
@@ -140,6 +145,11 @@
         },
         {
             "Name": "Rutwa Mokal",
+            "Position": "Graphics Member",
+            "ImagePath": ""
+        },
+        {
+            "Name": "Parul Bhople",
             "Position": "Graphics Member",
             "ImagePath": ""
         }
