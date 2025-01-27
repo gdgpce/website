@@ -29,7 +29,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img src="/animated-logo-stroke.svg" alt="logo" />
+                <a href="/"><img src="/animated-logo-stroke.svg" alt="logo" /></a>
                 <div>
                     {/* <h3>GDG - <span>PCE</span></h3> */}
                     {/* <h3>Google Developer Groups</h3> */}
