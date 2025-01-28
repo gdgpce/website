@@ -1,9 +1,12 @@
 /* Hero Styles */
 
 .hero {
-    /* height: 100vh; */
+    height: 100vh;
     width: 100vw;
     overflow: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .hero .con {
@@ -109,8 +112,24 @@
   100% { transform: rotate( 0.0deg) }
 }
 
+.scrollDownArrow {
+    color: var(--c3);
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 25px;
+    font-size: 2.5rem;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
 
-
+@keyframes bounce {
+    0%, 100% {
+        transform: rotate(90deg) translateX(10px);
+    }
+    50% {
+        transform: rotate(90deg) translateX(20px);
+    }
+}
 
 
 @media screen and (max-width: 768px) {
@@ -220,7 +239,7 @@
 .secContainer {
     width: 100%;
     display: flex;
-    padding: 70px 100px 0;
+    padding: 0px 100px 0;
     /* border: 1px solid wheat; */
 }
 
@@ -235,7 +254,7 @@
 .contentCon {
     min-width: 50%;
     /* height: 100dvh; */
-    /* background-color: red; */
+    /* background-color: red;   */
     display: flex;
     align-items: center;
 }
@@ -287,12 +306,20 @@
     padding-right: 0.5rem;
 }
 
-.secRedirect .arrow {
+/* .secRedirect .arrow {
     transition: transform 0.3s linear;
 }
 
 .secRedirect:hover .arrow {
     transform: translateX(5px); 
+} */
+
+.secRedirect .arrow {
+    transform: slide 2s infinite;
+}
+
+@keyframes identifier {
+    
 }
 
 .aboutIframe{

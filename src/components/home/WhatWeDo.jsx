@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { LongDash, SideDash } from "@/components/dash/Dash";
 import { DoubleRightOutlined } from "@ant-design/icons";
+import CountUp from 'react-countup';
 import styles from "./page.module.css";
 
 export default function WhatWeDo() {
@@ -21,15 +22,20 @@ export default function WhatWeDo() {
               community to solve real world problems.
             </div>
             <div className={styles.statContainer}>
-              <div className={styles.a}>
-                <div className={styles.statTitle}>1400+</div>
+              <div className={styles.a}> 
+
+                <div className={styles.statTitle}>
+                  <CountUp end={100} duration={5} enableScrollSpy scrollSpyDelay={100}/>+
+                </div>
                 <div className={styles.text}>Students connected</div>
 
-                <div className={styles.statTitle}>15000+</div>
+                <div className={styles.statTitle}><CountUp end={15000} duration={5} enableScrollSpy scrollSpyDelay={100}/>
+                +</div>
                 <div className={styles.text}>Lines of code written</div>
 
-                <div className={styles.statTitle}>10+</div>
+                <div className={styles.statTitle}><CountUp end={10} duration={5} enableScrollSpy scrollSpyDelay={100}/>+</div>
                 <div className={styles.text}>Workshops and events</div>
+
               </div>
               <div className={styles.b}>
                 <div className={styles.button}>

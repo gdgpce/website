@@ -1,6 +1,7 @@
-import styles from "./page.module.css";
+import { DoubleRightOutlined } from "@ant-design/icons";
 import dynamic from "next/dynamic";
-import { LongDash, SideDash } from "../dash/Dash";
+import { SideDash } from "../dash/Dash";
+import styles from "./page.module.css";
 
 const World = dynamic(
     () => import("@/components/ui/globe").then((m) => m.World),
@@ -10,6 +11,14 @@ const World = dynamic(
 );
 
 export default function Hero() {
+
+    const handleScroll = () => {
+        const targetDiv = document.getElementById("vision");
+        if (targetDiv) {
+        targetDiv.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     const globeConfig = {
         pointSize: 4,
         globeColor: "#062056",
@@ -417,6 +426,11 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+                <DoubleRightOutlined className={styles.scrollDownArrow}
+                style={{transform: "rotate(90deg)",}} onClick={handleScroll}
+                />
+            <a href="#vision">
+            </a>
             <img src="/hero-bg.svg" alt="bg" />
         </div>
     );
