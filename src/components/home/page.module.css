@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
 }
@@ -25,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     padding-left: 100px;
+    padding-top: 200px;
 }
 
 .hero .con .left .heading {
@@ -58,7 +59,6 @@
 }
 
 .hero .con .left .join:hover{
-    background-color: var(--secondary);
     color: var(--primary);
     border: 1.5px solid var(--secondary);
     /* box-shadow: 0 0 10px var(--secondary); */
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%; /* Ensures it spans the full height */
+    height: 100%;
     padding: 60px 30px;
 }
 
@@ -234,12 +234,11 @@
     }
 }
 
-
-
 .secContainer {
     width: 100%;
     display: flex;
-    padding: 0px 100px 0;
+    flex-direction: row;
+    padding: 60px 100px;
     /* border: 1px solid wheat; */
 }
 
@@ -254,19 +253,20 @@
 .contentCon {
     min-width: 50%;
     /* height: 100dvh; */
-    /* background-color: red;   */
     display: flex;
     align-items: center;
 }
 
+/* .right .imageCon {
+    padding-right: 100px;
+} */
+
 .imageCon {
     min-width: 50%;
-    padding: 100px 0;
-    /* min-height: 100dvh; */
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: greenyellow;    */
 }
 
 .imageCon img{
@@ -284,7 +284,7 @@
 
 .secDescription {
     font-size: 1.25rem;
-    max-width: 540px;
+    max-width: 90%;
     padding: 10px 0 30px;
     line-height: 1.875rem;
 }
@@ -306,19 +306,25 @@
     padding-right: 0.5rem;
 }
 
-/* .secRedirect .arrow {
-    transition: transform 0.3s linear;
+.secRedirect .arrow {
+    animation: slide 2s infinite;
+    animation-play-state: running; 
 }
 
 .secRedirect:hover .arrow {
-    transform: translateX(5px); 
-} */
-
-.secRedirect .arrow {
-    transform: slide 2s infinite;
+    animation-play-state: paused;
 }
 
-@keyframes identifier {
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0);
+    } 
     
 }
 

@@ -421,16 +421,12 @@ export default function Hero() {
                     <div className={styles.join} onClick={() => { window.open("https://gdg.community.dev/gdg-on-campus-pillai-college-of-engineering-navi-mumbai-india/", "_blank") }} >Join Our Chapter</div>
                 </div>
                 <div className={styles.right}>
-                    <div>
-                        <World data={sampleArcs} globeConfig={globeConfig} />
-                    </div>
+                    <World data={sampleArcs} globeConfig={globeConfig} />
                 </div>
             </div>
                 <DoubleRightOutlined className={styles.scrollDownArrow}
                 style={{transform: "rotate(90deg)",}} onClick={handleScroll}
                 />
-            <a href="#vision">
-            </a>
             <img src="/hero-bg.svg" alt="bg" />
         </div>
     );
