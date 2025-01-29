@@ -12,8 +12,28 @@ const googleSans = localFont({
   });
 
 export const metadata = {
-    title: "GDG PCE",
-    description: "On Campus Pillai College of Engineering",
+    title: "GDG-PCE",
+    description: "Google Developer Groups • On Campus Pillai College of Engineering, New Panvel",
+    openGraph: {
+        title: "GDG-PCE",
+        description: "Google Developer Groups • On Campus Pillai College of Engineering, New Panvel",
+        siteName: "GDG-PCE",
+        images: [
+            {
+                url: "https://gdg-website-test.vercel.app/banner.png",
+                width: 1200,
+                height: 630,
+            },
+        ]
+    },
+    twitter: {
+        title: "GDG-PCE",
+        description: "Google Developer Groups • On Campus Pillai College of Engineering, New Panvel",
+        images: ["https://gdg-website-test.vercel.app/banner.png"],
+    },
+    icons: {
+        shortcut: "/favicon.ico",
+    },
 };
 
 export default function RootLayout({ children }) {
