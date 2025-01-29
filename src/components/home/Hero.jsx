@@ -425,7 +425,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <div className={styles.mouse_scroll} >
+            <div className={styles.mouse_scroll} onClick={handleScroll} >
                 {/* <div className={styles.mouse}>
                     <div className={styles.wheel}></div>
                 </div> */}
