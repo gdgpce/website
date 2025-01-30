@@ -17,7 +17,7 @@ export default function OurTeam() {
             <SideDash color="var(--g3)" />
             <div className={styles.secDescription}>
               <p>
-                A teamwork is the first step in accomplishing any mission and for our mission we have built a team of zealous students.
+                Teamwork is the first step in accomplishing any mission and for our mission we have built a team of zealous students.
               </p>
             </div>
             <Link href="/team" className={styles.secRedirect}>
