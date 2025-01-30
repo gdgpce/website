@@ -18,7 +18,7 @@ export default function WhatWeDo() {
             <SideDash color="var(--g2)" />
             <div className={styles.secDescription}>
               We conducted workshops, seminars and other fun activities which
-              help the students develop new skills and grow together as
+              help the students develop new skills and grow together as a
               community to solve real world problems.
             </div>
             <div className={styles.statContainer}>
