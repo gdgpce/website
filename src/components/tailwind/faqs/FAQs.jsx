@@ -5,8 +5,6 @@ import { NextUIProvider } from "@nextui-org/react";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 
 export default function Page() {
-  //const defaultContent =
-  //"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
   return (
     <NextUIProvider>
       <div className="dark text-foreground bg-background" style={{ padding: "20px", maxWidth: "900px", margin: "0px auto 100px", color: "white" }}>
@@ -20,11 +18,7 @@ export default function Page() {
         
           <AccordionItem key="2" aria-label="Joining GDG PCE" title="📢 How can I join GDG PCE?">
             <p>
-              Joining GDG PCE is super easy! 🎉 Just visit our page at  
-              <a href="https://gdg.community.dev/gdg-on-campus-pillai-college-of-engineering-navi-mumbai-india/" target="_blank">
-                gdg.community.dev
-              </a>  
-              and click the “Join Us” button. 🖱️ Membership is open to everyone who has a passion for technology and is eager to learn—no matter their background or expertise level! 💻✨
+              Joining GDG PCE is super easy! 🎉 Just visit our home page click the 	&quot;Join Us&quot; button. 🖱️ Membership is open to everyone who has a passion for technology and is eager to learn—no matter their background or expertise level! 💻✨
             </p>
           </AccordionItem>
         
@@ -59,7 +53,6 @@ export default function Page() {
             </p>
           </AccordionItem>
         </Accordion>
-
       </div>
     </NextUIProvider>
   );
