@@ -412,7 +412,7 @@ export default function Hero() {
                         Hello Developers <span className={styles.waveEmoji}>👋</span>
                     </div>
                     <div className={styles.heading}>
-                    Dive into the vibrant world of innovation, where ideas turn into reality.
+                    Come, join us to learn grow and connect with technical minds and to unleash your talent
                     </div>
                     <SideDash />
                     <div className={styles.para}>
