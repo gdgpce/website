@@ -19,7 +19,7 @@ export default function Events() {
             Death by AI
             Date: October 2024
             Theme: Prompt Engineering  
-            Outcome: In this event the participants used their creativity to outsmart Artificial Intelligence through their prompt engineering skills and to get saved from a perilious situation designed by the AI. This event was a test of the participants' creativity and IQ.
+            Outcome: In this event the participants used their creativity to outsmart Artificial Intelligence through their prompt engineering skills and to get saved from a perilious situation designed by the AI. This event was a test of the participants&apos; creativity and IQ.
 
             Gen AI
             Date: October 2024

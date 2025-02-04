@@ -42,7 +42,7 @@ export default function Page() {
         
           <AccordionItem key="5" aria-label="Eligibility for joining GDG PCE" title="🎓 Do I need to be a student of Pillai College of Engineering to join?">
             <p>
-              While GDG PCE is primarily for students of Pillai College of Engineering, we welcome anyone interested in technology to participate in many of our events and activities. 🌟 If you're passionate about tech, you're welcome here! 🙌
+              While GDG PCE is primarily for students of Pillai College of Engineering, we welcome anyone interested in technology to participate in many of our events and activities. 🌟 If you&apos;re passionate about tech, you&apos;re welcome here! 🙌
             </p>
           </AccordionItem>
         
