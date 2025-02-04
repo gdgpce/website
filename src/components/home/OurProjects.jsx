@@ -16,11 +16,8 @@ export default function OurProjects() {
             </div>
             <SideDash color="var(--g4)" />
             <div className={styles.secDescription}>
-              Google Developer Groups at PCE organize and facilitate workshops,
-              hackathons, speaker sessions, and study jams to provide students
-              with technical development skills. By joining, you can attend
-              workshops, webinars, hackathons, and other exciting events. Expand
-              your technical skills through a peer-to-peer learning environment.
+              We have created projects which reflect the passion, creativity and the skills of our team. 
+              These projects are a statement of our determnation.
             </div>
             <Link href="https://github.com/gdgpce" target="_blank" className={styles.secRedirect}>
                 <span>VISIT GITHUB </span> <DoubleRightOutlined style={{ color: "var(--g4)" }} className={styles.arrow} />
