@@ -295,6 +295,7 @@
     font-size: 2.5rem;
     cursor: pointer;
     animation: bounce 2s infinite;
+    cursor: pointer;
 }
 
 @keyframes bounce {
