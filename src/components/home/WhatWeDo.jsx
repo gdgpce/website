@@ -17,9 +17,9 @@ export default function WhatWeDo() {
             </div>
             <SideDash color="var(--g2)" />
             <div className={styles.secDescription}>
-              We conducted workshops, seminars and other fun activities which
-              help the students develop new skills and grow together as
-              community to solve real world problems.
+              We are a developer committee who conducts hands-on workshops, exciting coding challenges,
+              abstruse hackathons, expert talks and many more fun events so that you can learn and grow with us
+              and get adept with latest technology.
             </div>
             <div className={styles.statContainer}>
               <div className={styles.a}> 
