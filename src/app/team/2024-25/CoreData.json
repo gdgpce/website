@@ -2,17 +2,17 @@
   {
     "Name": "Akash Satpute",
     "Position": "GDG On Campus Lead",
-    "ImagePath": "/team/akashSatpute.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742991157/IMG_2111_wtwlsg.jpg"
   },
   {
     "Name": "Rohith Pradeep",
     "Position": "Management Lead",
-    "ImagePath": "/team/rohithPradeep.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742989871/IMG_2134_rkcrdk.jpg"
   },
   {
     "Name": "Ankit Kumar",
     "Position": "Publicity Lead",
-    "ImagePath": "/team/ankitKumar.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742992369/IMG_2114_wtdkdw_c_crop_w_3000_g_auto_ztnt9x.jpg"
   },
   {
     "Name": "Atharva Kolekar",
@@ -22,17 +22,17 @@
   {
     "Name": "Munir Siddiqui",
     "Position": "Technical Lead",
-    "ImagePath": "/team/munirSiddiqui.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742991174/IMG_2146_yj8z35.jpg"
   },
   {
     "Name": "Tanmayi Pathrikar",
     "Position": "Marketing Lead",
-    "ImagePath": "/team/tanmayiPathrikar.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_pad,b_gen_fill,w_853,h_853,ar_1:1/v1742993511/tanmayi_pradeep_pathrikar_bxd35k.jpg"
   },
   {
     "Name": "Siddhi Paradhi",
     "Position": "Content Lead",
-    "ImagePath": "/team/siddhiParadhi.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742991204/IMG_2250_vuul1h.jpg"
   },
   {
     "Name": "Urmi Sawant",
@@ -42,11 +42,11 @@
   {
     "Name": "Nirmiti Borole",
     "Position": "Machine Learning Lead",
-    "ImagePath": "/team/nirmitiBorole.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/w_1000,ar_1:1,c_fill,g_auto,q_100/v1742991165/IMG_2131_awiwor.jpg"
   },
   {
     "Name": "Vijay Vishwanathan",
     "Position": "Coverage Lead",
-    "ImagePath": ""
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_3000,h_3000,g_auto/v1742991171/IMG_2140_zaorur.jpg"
   }
 ]
