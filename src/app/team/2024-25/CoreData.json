@@ -17,7 +17,7 @@
   {
     "Name": "Atharva Kolekar",
     "Position": "Web Dev Lead",
-    "ImagePath": "/team/atharvaKolekar.webp"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1743329462/image_2025-03-30_154053302_hefuc6.png"
   },
   {
     "Name": "Munir Siddiqui",
@@ -27,7 +27,7 @@
   {
     "Name": "Tanmayi Pathrikar",
     "Position": "Marketing Lead",
-    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_pad,b_gen_fill,w_853,h_853,ar_1:1/v1742993511/tanmayi_pradeep_pathrikar_bxd35k.jpg"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_fill,w_1300,h_900,g_auto/v1743327799/image_2025-03-30_151313113_grruft.png"
   },
   {
     "Name": "Siddhi Paradhi",
@@ -37,7 +37,7 @@
   {
     "Name": "Urmi Sawant",
     "Position": "Graphics Lead",
-    "ImagePath": "/team/urmiSawant.jpg"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_2400,h_1800,g_auto/v1743328828/image_2025-03-30_153026057_ajkibc.png"
   },
   {
     "Name": "Nirmiti Borole",
@@ -47,6 +47,6 @@
   {
     "Name": "Vijay Vishwanathan",
     "Position": "Coverage Lead",
-    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_3000,h_3000,g_auto/v1742991171/IMG_2140_zaorur.jpg"
+    "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_2800,h_3000,g_auto/v1742991171/IMG_2140_zaorur.jpg"
   }
 ]

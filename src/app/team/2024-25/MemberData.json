@@ -3,7 +3,7 @@
       {
           "Name": "Bedant Hota",
           "Position": "Mentor",
-          "ImagePath": ""
+          "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1743331945/image_2025-03-30_162223094_vmhsts.png"
       },
       {
           "Name": "Siddhi Thoke",
@@ -15,199 +15,179 @@
         {
             "Name": "Grahish",
             "Position": "Android Domain Lead",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991167/IMG_2135_q7qdp3.jpg"
         },
         {
             "Name": "Krishna Agrawal",
             "Position": "Open Source Domain Lead",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991177/IMG_2180_wl6hlu.jpg"
         },
         {
             "Name": "Saket Singh",
             "Position": "DSA Domain Lead",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991165/IMG_2130_ub5jqa.jpg"
         },
         {
-            "Name": "Dnynesh M",
+            "Name": "Dnyanesh Mohite",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991156/IMG_2108_jgkcpx.jpg"
         },
         {
             "Name": "Aryan V Khokale",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_3000,h_2400,g_auto/v1743329549/image_2025-03-30_154220721_s5rztt.png"
         },
         {
             "Name": "Shridhar Ganesh Khare",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991162/IMG_2126_nw1hbu.jpg"
         },
         {
             "Name": "Avani Srivastava",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_1800,h_1800,ar_1:1/v1743324413/image_2025-03-30_141648657_lbhqin.png"
         },
         {
             "Name": "Basawaraj V",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991156/IMG_2109_cv2mu6.jpg"
         },
         {
             "Name": "Suyash Thanage",
             "Position": "Web Dev Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_2600,h_2200,g_auto/v1743328679/image_2025-03-30_152756614_ueck1s.png"
         },
         {
             "Name": "Suyash Ware",
             "Position": "Web Dev Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991163/IMG_2127_lcuwn8.jpg"
         },
         {
             "Name": "Shreyas Dabhade",
             "Position": "Technical Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991156/IMG_20250216_221130_cyvomh.jpg"
         }
     ],
     "Management Team": [
         {
             "Name": "Hemant Waghmare",
             "Position": "Management Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991160/IMG_2119_ysqzok.jpg"
         },
         {
             "Name": "Sanjana Menon",
             "Position": "Management Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991170/IMG_2138_bgdlhd.jpg"
         },
         {
             "Name": "Tanishka Jagnivas",
             "Position": "Management Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991171/IMG_2139_i34cse.jpg"
         },
         {
             "Name": "Rudra Mayuresh Joshi",
             "Position": "Management Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991158/IMG_2113_s6wlee.jpg"
         },
         {
             "Name": "Arnav Deka",
             "Position": "Management Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991169/IMG_2137_b8txag.jpg"
         }
     ],
     "Publicity Team": [
         {
             "Name": "Shabarinath Raghunath",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991172/IMG_2144_is662a.jpg"
         },
         {
             "Name": "Tanvi Santosh Harde",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991180/IMG_2186_abmtl1.jpg"
         },
         {
             "Name": "CNS Manaswini",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991174/IMG_2147_qrrltp.jpg"
         },
         {
             "Name": "Yashika Singh",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991190/IMG_2226_glhv5d.jpg"
         },
         {
             "Name": "Thombre Shalmali Atul",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991179/IMG_2183_porc1y.jpg"
         },
         {
             "Name": "Manish Santosh Dhole",
             "Position": "Publicity Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991203/IMG_2237_stu2sn.jpg"
         }
     ],
     "Graphics Team": [
         {
             "Name": "Purva Devidas Badekar",
             "Position": "Graphics Member",
-            "ImagePath": ""
-        },
-        {
-            "Name": "Swaraj More",
-            "Position": "Graphics Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991180/IMG_2185_wuikzb.jpg"
         },
         {
             "Name": "Parth Ramesh Bamane",
             "Position": "Graphics Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991163/IMG_2129_xgwcnk.jpg"
         },
         {
             "Name": "Rutwa Mokal",
             "Position": "Graphics Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/c_crop,w_2200,h_1500,g_auto/v1743330200/image_2025-03-30_155315613_potg83.png"
         },
         {
             "Name": "Parul Bhople",
             "Position": "Graphics Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991162/IMG_2124_ju5deg.jpg"
         }
     ],
     "Content Team": [
         {
             "Name": "Navin Choudhary",
             "Position": "Content Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991183/IMG_2187_tpnitk.jpg"
         },
         {
             "Name": "Nandan Pradip Tandel",
             "Position": "Content Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991184/IMG_2190_fhonit.jpg"
         }
     ],
     "Coverage  Team": [
         {
-            "Name": "Anjali Raikar",
-            "Position": "Coverage Member",
-            "ImagePath": ""
-        },
-        {
-            "Name": "Jidnyasa Kalaskar",
-            "Position": "Coverage Member",
-            "ImagePath": ""
-        },
-        {
-            "Name": "Jayesh Sonar",
-            "Position": "Coverage Member",
-            "ImagePath": ""
-        },
-        {
             "Name": "Vedant Mahajan",
             "Position": "Coverage Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991173/IMG_2145_nm0t2x.jpg"
         }
     ],
     "Marketing Team": [
         {
             "Name": "Ameya Kavishwar",
             "Position": "Marketing Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991157/IMG_2112_ps1yv5.jpg"
         },
         {
             "Name": "Abhijay Anilan Puthan Veedu",
             "Position": "Marketing Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991177/IMG_2179_gd6g1b.jpg"
         },
         {
             "Name": "Sejal Bhanushali",
             "Position": "Marketing Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991168/IMG_2136_bmi8bl.jpg"
         },
         {
             "Name": "Krishna Madinkumar",
             "Position": "Marketing Member",
-            "ImagePath": ""
+            "ImagePath": "https://res.cloudinary.com/dzu6fyya6/image/upload/t_Centered/v1742991160/IMG_2121_i8pz0x.jpg"
         }
     ]
 }
